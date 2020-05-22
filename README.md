@@ -11,6 +11,19 @@ Secondary:
 #fffffb
 #aabb97
 
+
+### Restrictions
+Chronic diseases:
+Diabetes
+Hypertension
+
+Allergies:
+To peanuts
+To milk
+
+
+
+
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
