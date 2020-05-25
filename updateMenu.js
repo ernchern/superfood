@@ -32,7 +32,12 @@ menuRef.set({
 	hypertension: false,
 	nopeanut: false,
 	nomilk: false,
-	imageurl: ''
+	imageurl: '',
+	nutrition: {
+		sodium: 0,
+		fat: 0,
+		protein: 0
+	}
 });
 
 menuRef.on("value", snapshot => {

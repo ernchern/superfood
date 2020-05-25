@@ -29,6 +29,7 @@ Somehow you need to end the program manually because the code will keep require.
 
 * region: "global" or "country name",
 * breakfast, health restrictions: boolean
+* nutrition: an array of sodium, protein and fat
 * imageurl
 
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
