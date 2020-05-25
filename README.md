@@ -22,7 +22,14 @@ To peanuts
 To milk
 
 
+### Update Menu
+<!-- To install firebase admin npm package, run: $npm install firebase-admin --save -->
+Run updateMenu.js using node to update the database
+Somehow you need to end the program manually because the code will keep require. Thanks if anyone could fix it.
 
+* region: "global" or "country name",
+* breakfast, health restrictions: boolean
+* imageurl
 
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
