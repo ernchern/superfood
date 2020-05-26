@@ -26,10 +26,16 @@ class MealInfo extends React.Component{
     }
 
     formatDate() {
-        const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(this.props.date);
-        const mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(this.props.date)
-        const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(this.props.date);
+        const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(this.state.date);
+        const mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(this.state.date)
+        const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(this.state.date);
         return da + " " + mo;
+
+    }
+
+    changeDate(change) {
+        var newDate = new Date(this.state.date.getFullYear(), this.state.date.getMonth(), this.state.date.getDate() + change);
+        this.setState({date: newDate});
 
     }
 
@@ -40,13 +46,13 @@ class MealInfo extends React.Component{
                     <nav>
                         <div className="row align-content-center">
                             <div className="col-3">
-                                Previous day
+                            <button className="btn btn-primary" onClick={() => this.changeDate(-1)}>Previous day</button>
                             </div>
                             <div className="col-6">
                                 {this.formatDate()}
                             </div>
                             <div className="col-3">
-                                Next day
+                                <button className="btn btn-primary" onClick={() => this.changeDate(1)}>Next day</button>
                             </div>
                                 
                         </div>
