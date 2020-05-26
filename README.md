@@ -35,7 +35,7 @@ Somehow you need to end the program manually because the code will keep require.
 
 ### Classes/Pages
 
-App.js - Control which page is shown
+App.js - Control which page is shown. Use states to debug.
 Main.js - Main page of the website where personalized meals are shown
 Meal.js - Div shown to participants with recommended meal for breakfast/lunch/dinner
 MealInfo.js - Right-hand frame on Main.js containing all meals
