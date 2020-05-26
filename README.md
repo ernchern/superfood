@@ -32,6 +32,21 @@ Somehow you need to end the program manually because the code will keep require.
 * nutrition: an array of sodium, protein and fat
 * imageurl
 
+
+### Classes/Pages
+
+App.js - Control which page is shown
+Main.js - Main page of the website where personalized meals are shown
+Meal.js - Div shown to participants with recommended meal for breakfast/lunch/dinner
+MealInfo.js - Right-hand frame on Main.js containing all meals
+NutrientIntake.js - Controls nutrient intake graph
+PersonalRegister.js - Page for personal registration (pt 1/3)
+AllergyRegister.js - Page for allergies during registration (pt 2/3)
+ProfileInfo.js - Left-hand frame on Main.js containing nutrient intake graph and user info
+RecipeInfo.js - Recipe page with more information about meal
+Register.js - Controls registration
+TiredModal.js - Pop-up for "I'm tired of this"
+
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

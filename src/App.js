@@ -31,6 +31,7 @@ class App extends React.Component {
         break;
       case "main":
         content = <Main/>
+        break;
       default:
         content = <h1>Error</h1>;
     }
