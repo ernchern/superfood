@@ -10,11 +10,11 @@ class TiredModal extends React.Component {
     render() {
         return (
             <Modal show={this.props.show}>
-                <div className="modal-dialog modal-dialog-centered" role="document">
+                <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title">Oats with nuts and berries</h5>
-                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" className="close" aria-label="Close" onClick={() => this.props.changeModal(this.props.modalType)}>
                         <span aria-hidden="true">&times;</span>
                     </button>
                         </div>
@@ -33,8 +33,8 @@ class TiredModal extends React.Component {
                                 <br/>Fats: 5g</p>
                         </div>
                         <div className="modal-footer">
-                            <a href="#tiredOfThis" className="btn btn-primary" data-dismiss="modal" data-toggle="modal">I want something new!</a>
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={() => this.props.changeModal(this.props.modalType)}>Close</button>
+                            <button className="btn btn-primary">I want something new!</button>
+                            <button className="btn btn-secondary" onClick={() => this.props.changeModal(this.props.modalType)}>Close</button>
                         </div>
                     </div>
                 </div>

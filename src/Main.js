@@ -15,10 +15,15 @@ class Main extends React.Component{
             weight: "80 kg",
             date: new Date()
         }
+
+        this.toggleRecipeMode = this.toggleRecipeMode.bind(this);
     }
 
-    toggleRecipeMode() {
-        this.setState({showRecipe: !this.state.showRecipe});
+    toggleRecipeMode(event, mealType) {
+        if (event.target.id != "tiredButton") {
+            this.setState({showRecipe: !this.state.showRecipe, selectedRecipe: mealType});
+        }
+        
     }
 
     render() {
@@ -27,9 +32,11 @@ class Main extends React.Component{
                 <div className="container">
                     <Row>
                         <div className="register-text container-fluid">
-                            <div className="row">
+                            <div className="row" style={{paddingLeft: "1%"}}>
                                 <ProfileInfo name={this.state.name} height={this.state.height} weight={this.state.weight}/>
-                                {(!this.state.showRecipe)? <MealInfo currentDate={this.state.date}/> : <RecipeInfo/>}
+                                {(!this.state.showRecipe)? 
+                                <MealInfo currentDate={this.state.date} toggleRecipeMode={this.toggleRecipeMode}/> : 
+                                <RecipeInfo toggleRecipeMode={this.toggleRecipeMode}/>}
                             </div>
                         </div>
                     </Row>

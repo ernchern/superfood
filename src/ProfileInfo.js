@@ -11,11 +11,16 @@ class ProfileInfo extends React.Component{
         return (
             <div className="col-sm-4 left-column">
                 <h5 className="">SUPERFOOD</h5>
-                <p>{this.props.name}</p>
-                <p>Height: {this.props.height}</p>
-                <p>Weight: {this.props.weight}</p>
-                <button className="btn btn-primary">Edit Profile</button>
-                <NutrientIntake/>
+                <div className="profileArea">
+                    <p>{this.props.name}</p>
+                    <p>Height: {this.props.height}</p>
+                    <p>Weight: {this.props.weight}</p>
+                    <button className="btn btn-primary">Edit Profile</button>
+                </div>
+                <div>
+                    <NutrientIntake/>
+                </div>
+
             </div>
         );
     }

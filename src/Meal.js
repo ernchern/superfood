@@ -16,7 +16,7 @@ class Meal extends React.Component{
                     <h5 className="mt-0">{this.props.type}</h5>
                     <h6 className="mt-0">Granola with nuts and berries</h6>
                     <p>Ingredients: Nuts, oats, berries, almond milk. Nutrients: Protein: 10g, Carbohydrates: 12g, Fats: 5g</p>
-                    <button className="btn btn-primary" onClick={() => this.props.changeModal(this.props.modalType)}>I want something new!</button>
+                    <button id="tiredButton" className="btn btn-primary" onClick={() => this.props.changeModal(this.props.modalType)}>I want something new!</button>
                 </div>
             </div>
         );
