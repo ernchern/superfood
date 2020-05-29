@@ -15,7 +15,7 @@ class ProfileInfo extends React.Component{
                     <p>{this.props.name}</p>
                     <p>Height: {this.props.height}</p>
                     <p>Weight: {this.props.weight}</p>
-                    <button className="btn btn-primary">Edit Profile</button>
+                    <button className="profile-button">Edit Profile</button>
                 </div>
                 <div>
                     <NutrientIntake/>

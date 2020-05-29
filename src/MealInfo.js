@@ -39,7 +39,7 @@ class MealInfo extends React.Component{
 
     render() {
         return (
-            <div className="col-sm-8">
+            <div className="col-sm-8 recipe-pane">
                 <div className="container">
                     <nav>
                         <div className="row align-content-center">

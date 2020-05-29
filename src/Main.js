@@ -9,7 +9,7 @@ class Main extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            showRecipe: false,
+            showRecipe: true,
             name: "Aruj Singh",
             height: "191 cm",
             weight: "80 kg",
