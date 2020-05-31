@@ -1,10 +1,16 @@
 import React from 'react';
 import './App.css';
 import { Col, Row, Container } from 'react-bootstrap';
+import { AutoComplete } from '@progress/kendo-react-dropdowns';
+import { countries } from './countries';
 
 class PersonalRegister extends React.Component {
     constructor(props) {
       super(props);
+	  
+	  this.state = {
+		  value: '',
+		}
     }
   
     render() {  
@@ -20,8 +26,8 @@ class PersonalRegister extends React.Component {
                             <div className="form-register">
                                 <div className="steps clearfix">
                                     <ul role="tablist">
-                                        <li role="tab" aria-disabled="false" className="first current" aria-selected="true"><a id="form-total-t-0" onClick={() => this.props.goToId(0)} aria-controls="form-total-p-0"><span className="current-info audible"> </span><span className="title">1</span></a></li>
-                                        <li role="tab" aria-disabled="false"><a id="form-total-t-1" onClick={() => this.props.goToId(1)} aria-controls="form-total-p-1"><span className="title">2</span></a></li>
+                                        <li role="tab" aria-disabled="false" className="first current" aria-selected="true"><a id="form-total-t-0" onClick={() => this.props.goToId(0)} aria-controls="form-total-p-0"><span className="current-info audible"></span><span className="title">1</span></a></li>
+                                        <li role="tab" aria-disabled="false" className="second"><a id="form-total-t-1" onClick={() => this.props.goToId(1)} aria-controls="form-total-p-1"><span className="title">2</span></a></li>
                                         <li role="tab" aria-disabled="false" className="last"><a id="form-total-t-2" onClick={() => this.props.goToId(2)} aria-controls="form-total-p-2"><span className="title">3</span></a></li>
                                     </ul>
                                 </div>
@@ -46,7 +52,10 @@ class PersonalRegister extends React.Component {
                                     </Col>
                                     <Col lg="6">
                                         <label>Country</label>
-                                        <input type="text" id="country" onChange={(event) => this.props.setResponse("country", event.target.value)}/>
+										<AutoComplete
+                                            style={{ width: '100%' }}
+                                            data={countries}
+                                        />
                                     </Col>
                                     <Col lg="6">
                                         <label>Weight (optional)</label>
