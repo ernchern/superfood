@@ -1,19 +1,15 @@
 import React from 'react';
 import './App.css';
 import { Col, Row, Container } from 'react-bootstrap';
-import { AutoComplete } from '@progress/kendo-react-dropdowns';
-import { countries } from './countries';
+import Select from "react-select";
+import { countries } from './countryList.js';
 
 class PersonalRegister extends React.Component {
     constructor(props) {
       super(props);
-	  
-	  this.state = {
-		  value: '',
-		}
     }
-  
-    render() {  
+	
+    render() {	
       return (
         <section className="register-section container-box">
             <Container>
@@ -36,34 +32,32 @@ class PersonalRegister extends React.Component {
                                 <Row>
                                     <Col lg="6">
                                         <label>First Name</label>
-                                        <input type="text" id="name" onChange={(event) => this.props.setResponse("name", event.target.value)}/>
+                                        <input autocomplete='off' type="text" id="name" onChange={(event) => this.props.setResponse("name", event.target.value)}/>
                                     </Col>
                                     <Col lg="6">
                                         <label>Last Name</label>
-                                        <input type="text" id="email" onChange={(event) => this.props.setResponse("lastName", event.target.value)}/>
+                                        <input autocomplete='off' type="text" id="email" onChange={(event) => this.props.setResponse("lastName", event.target.value)}/>
                                     </Col>
                                     <Col lg="6">
                                         <label>Your email address</label>
-                                        <input type="text" id="email" onChange={(event) => this.props.setResponse("email", event.target.value)}/>
+                                        <input autocomplete='off' type="text" id="email" onChange={(event) => this.props.setResponse("email", event.target.value)}/>
                                     </Col>
                                     <Col lg="6">
                                         <label>Mobile No</label>
-                                        <input type="text" id="mobile" onChange={(event) => this.props.setResponse("mobile", event.target.value)}/>
+                                        <input autocomplete='off' type="text" id="mobile" onChange={(event) => this.props.setResponse("mobile", event.target.value)}/>
                                     </Col>
                                     <Col lg="6">
                                         <label>Country</label>
-										<AutoComplete
-                                            style={{ width: '100%' }}
-                                            data={countries}
-                                        />
+										<Select styles={ {valueContainer: base => ({ ...base, height:'46px'})}} 
+										options={countries} values={[]} onChange={(value) => this.props.setResponse("country", value.label)} />
                                     </Col>
                                     <Col lg="6">
                                         <label>Weight (optional)</label>
-                                        <input type="text" id="country" onChange={(event) => this.props.setResponse("weight", event.target.value)}/>
+                                        <input autocomplete='off' type="text" id="country" onChange={(event) => this.props.setResponse("weight", event.target.value)}/>
                                     </Col>
                                     <Col lg="6">
                                         <label>Height (optional)</label>
-                                        <input type="text" id="country" onChange={(event) => this.props.setResponse("height", event.target.value)}/>
+                                        <input autocomplete='off' type="text" id="country" onChange={(event) => this.props.setResponse("height", event.target.value)}/>
                                     </Col>
                                 </Row>
                                 <p className="btn register-btn" onClick={this.props.nextStage}>Next</p>
