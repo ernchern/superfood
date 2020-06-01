@@ -17,7 +17,8 @@
     "react-dom": "^16.13.1",
     "react-dropdown-select": "^4.4.1",
     "react-scripts": "3.4.1",
-    "react-select": "^3.1.0"
+    "react-select": "^3.1.0",
+    "uninstall": "0.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
