@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import PersonalRegister from './PersonalRegister';
 import AllergyRegister from './AllergyRegister';
+import DiseaseRegister from './DiseaseRegister.js';
 
 class Register extends React.Component {
     constructor(props) {
@@ -29,13 +30,15 @@ class Register extends React.Component {
         var page = this.state.states[this.state.currId];
         var responses = this.state.responses;
         if (page === "personal") {
-            if ("name" in responses && "lastName" in responses && "email" in responses && "mobile" in responses && "country" in responses) {
+			if ("name" in responses && "lastName" in responses && "email" in responses && "mobile" in responses && "country" in responses) {
                 this.setState({currId: this.state.currId + 1});
             } else {
                 alert("Error");
             }
+		} else if (page === "diseases") {
+			alert("submit")
         } else {
-            alert("Not yet");
+            this.setState({currId: this.state.currId + 1});
         }
     }
 
@@ -58,8 +61,8 @@ class Register extends React.Component {
             case "allergy":
                 content = <AllergyRegister setResponse={this.setResponse} nextStage={this.nextStage} goToId={this.goToId}/>
                 break;
-            default:
-                content = "Error";
+            case "diseases":
+                content = <DiseaseRegister setResponse={this.setResponse} nextStage={this.nextStage} goToId={this.goToId}/>
                 break;
         }
 

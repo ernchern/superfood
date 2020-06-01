@@ -17,7 +17,7 @@ class PersonalRegister extends React.Component {
                     <Col lg="8">
                         <div className="register-text align-content-center">
                             <div className="section-title">
-                                <h2>Register Now</h2>
+                                <h2 align='center'>Register Now</h2>
                             </div>
                             <div className="form-register">
                                 <div className="steps clearfix">
