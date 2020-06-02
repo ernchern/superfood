@@ -30,14 +30,10 @@ class App extends React.Component {
         content = <Register setPage={this.setPage}/>;
         break;
       case "main":
-        content = <Main/>
+        content = <Main/>;
         break;
       default:
         content = <h1>Error</h1>;
-    }
-
-    setPage(page) {
-        this.setState({ currPage: page });
     }
 
     return (
