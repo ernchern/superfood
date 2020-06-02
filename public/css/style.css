@@ -428,3 +428,8 @@ a {
 .menu h6 {
     margin-bottom: 10px;
 }
+
+.btn-primary {
+    background-color: #ac8fb6;
+    border-color: #ac8fb6;
+}
