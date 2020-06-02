@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 html,
@@ -210,7 +210,7 @@ img {
 .check-icon {
     margin-right: 2px;
     display: inline-block;
-    color: #aabb97;
+    color: #ac8fb6;
 }
 
 .bottom {
@@ -255,29 +255,29 @@ img {
     margin-bottom: 18px;
 }
 
-
 .register-text .allergy-form label {
-	display: inline-flex;
+    display: inline-flex;
     font-size: large;
     color: #9b9b9b;
-	margin-right: 20px;
+    margin-right: 20px;
 }
 
 .register-text .allergy-form input {
-	width: 30px;
+    width: 30px;
     height: 46px;
     border: 1px solid #ebebeb;
     padding-left: 20px;
     font-size: 14px;
     color: #9b9b9b;
-	margin-bottom:14px;
+    margin-bottom: 14px;
 }
 
 .profile-button {
     border-radius: 5px;
-    border: 1px solid #8ba072;
+    border: 0px solid #8ba072;
     min-height: 35px;
     background-color: #dcedc8;
+    margin-top: 10px;
 }
 
 .profile-button:hover {
@@ -286,7 +286,6 @@ img {
     min-height: 35px;
     background-color: #cadbb5;
 }
-
 
 .recipe-pane {
     max-width: 50%;
@@ -298,9 +297,11 @@ img {
     border: 0px;
     width: 100%;
     height: 35px;
-    background-color: #dcedc8;
+    background-color: #ac8fb6;
     padding-right: 0;
     padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .bottom-recipe-row:hover {
@@ -308,7 +309,7 @@ img {
     border: 0px;
     width: 100%;
     height: 35px;
-    background-color: #cadbb5;
+    background-color: #debfe8;
     padding-right: 0;
     padding-left: 0;
 }
@@ -316,7 +317,7 @@ img {
 .recipe-color-p {
     font-size: 18px;
     font-weight: 600;
-    color: #ac8fb6;
+    color: white;
 }
 
 .register-text .register-form .register-btn {
@@ -480,6 +481,7 @@ img {
 
 .left-column p {
     margin-bottom: 5px;
+    font-size: medium;
 }
 
 .left-column .primary-btn {
@@ -543,9 +545,9 @@ a {
 }
 
 .headerRecipe {
-    background-color:  #debfe8;
+    background-color: #debfe8;
     border-radius: 15px 15px 0px 0px;
-    border-bottom: 3px solid #dcedc8;
+    border-bottom: 1px solid white;
 }
 
 .image-border {
@@ -562,8 +564,8 @@ a {
 }
 
 .colRecipe {
-    background-color:  #fff2ff;
-    border-bottom: 3px solid #dcedc8;
+    background-color: #fff2ff;
+    border-bottom: 1px solid white;
 }
 
 .recipe-list {
@@ -584,8 +586,8 @@ a {
 }
 
 .fillDiv {
-    width:100%;
-    display:block;
+    width: 100%;
+    display: block;
 }
 
 .dateDiv {
@@ -593,19 +595,22 @@ a {
     font-weight: bold;
     font-size: 20px;
     vertical-align: middle;
-  }
-
-  .pinkButton {
-    background-color: #ac8fb6;
-  }
-
-  .profileArea {
-      margin-bottom: 5%;
-  }
-  
-.question {
-	margin-bottom:20px;
-	font-size:large;
 }
 
-  
+.pinkButton {
+    background-color: #ac8fb6;
+}
+
+.profileArea {
+    margin-bottom: 5%;
+}
+
+.question {
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+.date-btn {
+    background-color: #ac8fb6;
+    border-color: #ac8fb6;
+}

@@ -6,43 +6,44 @@ import Main from './Main.js';
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.state = {
-      currPage: "register",
-    };
+        this.state = {
+            currPage: "main",
+        };
 
-    this.setPage = this.setPage.bind(this);
-  }
-
-  setPage(page) {
-    this.setState({currPage: page});
-  }
-
-  render() {
-    let content;
-    switch(this.state.currPage) {
-      case "login":
-        content = <Login setPage={this.setPage}/>;
-        break;
-      case "register":
-        content = <Register setPage={this.setPage}/>;
-        break;
-      case "main":
-        content = <Main/>
-        break;
-      default:
-        content = <h1>Error</h1>;
+        this.setPage = this.setPage.bind(this);
     }
 
+    setPage(page) {
+        this.setState({ currPage: page });
+    }
 
-    return (
-      <div>
-        {content}
-      </div>
-    )
-  }
+    render() {
+        let content;
+        switch (this.state.currPage) {
+            case "login":
+                content = < Login setPage = { this.setPage }
+                />;
+                break;
+            case "register":
+                content = < Register setPage = { this.setPage }
+                />;
+                break;
+            case "main":
+                content = < Main / >
+                    break;
+            default:
+                content = < h1 > Error < /h1>;
+        }
+
+
+        return ( <
+            div > { content } <
+            /div>
+        )
+    }
 }
 
 export default App;
