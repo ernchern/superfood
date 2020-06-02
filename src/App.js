@@ -10,7 +10,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      currPage: "register",
+      currPage: "login",
     };
 
     this.setPage = this.setPage.bind(this);
@@ -38,7 +38,7 @@ class App extends React.Component {
 
 
     return (
-      <div>
+      <div className="div-bg">
         {content}
       </div>
     )
