@@ -39,7 +39,7 @@ class NutrientIntake extends React.Component {
                             </div>
                             <div className="col-sm-9">
                                 <div className="progress">
-                                    <div className="progress-bar" style={{width: this.state.nutrientContent.sodium + "%"}}>{this.state.nutrientContent.sodium + "%"}</div>
+                                    <div className="nutrients-progress-bar" style={{width: this.state.nutrientContent.sodium + "%"}}>{this.state.nutrientContent.sodium + "%"}</div>
                                 </div>
                             </div>
                             <div className="col-sm-3">
@@ -47,7 +47,7 @@ class NutrientIntake extends React.Component {
                             </div>
                             <div className="col-sm-9">
                                 <div className="progress">
-                                    <div className="progress-bar" style={{width: this.state.nutrientContent.protein + "%"}}>{this.state.nutrientContent.protein + "%"}</div>
+                                    <div className="nutrients-progress-bar" style={{width: this.state.nutrientContent.protein + "%"}}>{this.state.nutrientContent.protein + "%"}</div>
                                 </div>
                             </div>
                             <div className="col-sm-3">
@@ -55,7 +55,7 @@ class NutrientIntake extends React.Component {
                             </div>
                             <div className="col-sm-9">
                                 <div className="progress">
-                                    <div className="progress-bar" style={{width: this.state.nutrientContent.fat + "%"}}>{this.state.nutrientContent.fat + "%"}</div>
+                                    <div className="nutrients-progress-bar" style={{width: this.state.nutrientContent.fat + "%"}}>{this.state.nutrientContent.fat + "%"}</div>
                                 </div>
                             </div>
                         </div>

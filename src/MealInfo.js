@@ -44,19 +44,19 @@ class MealInfo extends React.Component{
                     <nav>
                         <div className="row align-content-center">
                             <div className="col-3">
-                            <button className="glyphicon-arrow-right btn btn-primary date-btn fillDiv " onClick={() => this.changeDate(-1)}>Previous day</button>
+                            <button className="primary-btn fillDiv " onClick={() => this.changeDate(-1)}>Previous day</button>
                             </div>
                             <div className="col-6 dateDiv" onClick={() => this.setState({date: new Date()})}>
                                {this.formatDate()}
                             </div>
                             <div className="col-3">
-                                <button className="btn btn-primary date-btn fillDiv" onClick={() => this.changeDate(1)}>Next day</button>
+                                <button className="primary-btn fillDiv" onClick={() => this.changeDate(1)}>Next day</button>
                             </div> 
                         </div>
                         <div className="row align-content-center">
                         <div className="col-3 dateDiv align-content-center"></div>
                             <div className="col-6 dateDiv align-content-center">
-                            <button className="btn btn-primary date-btn fillDiv" onClick={() => this.setState({date: new Date()})}>
+                            <button className="primary-btn fillDiv" onClick={() => this.setState({date: new Date()})}>
                                Today</button>
                             </div>
                             <div className="col-3 dateDiv align-content-center"></div>
