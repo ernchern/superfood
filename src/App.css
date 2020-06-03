@@ -528,8 +528,9 @@ img {
 }
 
 .nutrient-intake {
+	height: 50%;
     position: absolute;
-    bottom: 30%;
+	margin-top: 20%;
 }
 
 .nutrient-intake h6 {
