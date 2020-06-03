@@ -10,7 +10,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      currPage: "main",
+      currPage: "register",
     };
 
     this.setPage = this.setPage.bind(this);

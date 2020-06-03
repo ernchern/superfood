@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Col, Row, Container } from 'react-bootstrap';
+import Fade from 'react-reveal/Fade';
 
 class AllergyRegister extends React.Component {
     constructor(props) {
@@ -14,23 +15,31 @@ class AllergyRegister extends React.Component {
 	  this.props.setResponse("nomilk",false);
 	  
 	  this.showAllergy = this.showAllergy.bind(this);
+	  this.hideAllergy = this.hideAllergy.bind(this);
     }
 	
 	showAllergy() {
 		this.setState({allergy:true});
+	}
+	
+	hideAllergy() {
+		this.setState({allergy:false});
 	}
   
     render() { 
 		const allergy = this.state.allergy;
 		let options;
 		if (allergy) {
-			options = <div>
+			options = 
+			<Fade>
+			<div>
 				<p className="question">Choose type(s) of food allergy:</p>
 				<div>
 				  <label className="checkbox-inline"><input type="checkbox" onChange={(event) => this.props.setResponse("nopeanut",event.target.checked)}/>Peanuts</label>
 				  <label className="checkbox-inline"><input type="checkbox" onChange={(event) => this.props.setResponse("nomilk", event.target.checked)}/>Milk</label>
 				</div>
-			</div>;
+			</div>
+			</Fade>;
 		} else {
 			options = <div></div>;
 		}
@@ -58,7 +67,7 @@ class AllergyRegister extends React.Component {
 											<p className="question">Do you have any food allergy?</p>
 											<div>
 											  <label className="radio-inline"><input type="radio" name="allergy" onChange={this.showAllergy}/>Yes</label>
-											  <label className="radio-inline"><input type="radio" name="allergy"/>No</label>
+											  <label className="radio-inline"><input type="radio" name="allergy" onChange={this.hideAllergy}/>No</label>
 											</div>
 										</div>
 									</Col>
