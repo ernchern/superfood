@@ -97,11 +97,12 @@ img {
 .primary-btn:hover {
     border: 1px solid transparent;
     border-radius: 10px;
-    color: #debfe8;
-    background-color: #debfe8;
+    color: white;
+    background-color: transparent;
     border-color: #debfe8;
     color: #fff;
 }
+
 .secondary-btn {
     border: 1px solid transparent;
     border-radius: 10px;
@@ -149,6 +150,7 @@ img {
     z-index: -1;
     opacity: 1;
 }
+
 #preloder {
     position: fixed;
     width: 100%;
@@ -373,6 +375,25 @@ img {
     margin-bottom: 14px;
 }
 
+.logout-column {
+    text-align: right;
+}
+
+.logout-button {
+    border-radius: 5px;
+    border: 1px solid #ac8fb6;
+    min-height: 35px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.logout-button:hover {
+    border-radius: 5px;
+    border: 1px solid #ac8fb6;
+    min-height: 35px;
+    background-color: #fff2ff;
+}
+
 .profile-button {
     border-radius: 5px;
     border: 0px solid #8ba072;
@@ -387,7 +408,6 @@ img {
     min-height: 35px;
     background-color: #cadbb5;
 }
-
 .recipe-pane {
     max-width: 50%;
     min-height: 800px;
@@ -582,11 +602,13 @@ img {
 
 .left-column {
     background-color: #faf5fa;
-    padding: 30px;
+    padding: 20px;
+    padding-bottom: 0px;
 }
 
 .left-column h5 {
     margin-bottom: 20px;
+    font-size: 30px;
 }
 
 .left-column p {
@@ -728,4 +750,12 @@ a {
 .date-btn {
 	background-color: #ac8fb6;
     border-color: #ac8fb6;
+}
+
+.meal {
+
+}
+
+.meal:hover {
+    border: 2px solid #ccc;
 }
