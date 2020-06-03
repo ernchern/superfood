@@ -5,6 +5,14 @@ import {Modal} from 'react-bootstrap';
 class TiredModal extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {"modal-title": "Oats with nuts and berries"};
+        this.changeContent = this.changeContent.bind(this)
+    }
+
+    changeContent(event) {
+        alert(this.props)
+        this.setState({ "modal-title": "Deez Nuts" });
+        this.setState({ "modal-body recipe": "Hell yeah" });
     }
 
     render() {
@@ -14,9 +22,10 @@ class TiredModal extends React.Component {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title">Oats with nuts and berries</h5>
+                            <img src="img/breakfast.jpg" className="w-100" alt="..." />
                             <button type="button" className="close" aria-label="Close" onClick={() => this.props.changeModal(this.props.modalType)}>
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
                         <div className="modal-body recipe">
                             <h5>You will need:</h5>
@@ -33,7 +42,8 @@ class TiredModal extends React.Component {
                                 <br/>Fats: 5g</p>
                         </div>
                         <div className="modal-footer">
-                            <button className="btn btn-primary">I want something new!</button>
+                            <button className="btn btn-primary" onClick={() => this.props.changeModal(this.props.modalType)}>Confirm</button>
+                            <button className="btnSuggestion" onClick={this.changeContent}>Give me another suggestion!</button>
                             <button className="btn btn-secondary" onClick={() => this.props.changeModal(this.props.modalType)}>Close</button>
                         </div>
                     </div>
