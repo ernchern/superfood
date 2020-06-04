@@ -28,15 +28,19 @@ class TiredModal extends React.Component {
         return (
             <Modal show={this.props.show}>
                 <div className="row">
-                    <div className="col-lg-9">
-                        <h5 className="modal-title">Oats with nuts and berries</h5>
+                    <div className="col-sm-9">
+                        <p className="text-vertical-center">
+                            Oats with nuts and berries
+                            </p>
+                        <p className="small-margin">
+                        <button className="btnRecipe" onClick={this.recipe}> View Recipe</button>
+                    </p>
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-sm-3">
                         <img src="img/breakfast.jpg" className="w-100 image-border" alt="..." />
                     </div>
                 </div>
                 <div className="row-md-1">
-                    <button className="btnRecipe" onClick={this.recipe}> View Recipe</button>
                     {
                         this.state.showMe ?
                             <div className="row-md-3" style={{ position: "relative" }}>
