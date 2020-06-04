@@ -9,7 +9,7 @@ class ProfileInfo extends React.Component{
 
     render() {
         return (
-            <div className="col-sm-4 left-column">
+            <div className="col-sm-4 left-column profile-info">
                 <h5 className="">SUPERFOOD</h5>
                 <div className="profileArea">
                     <p>{this.props.name}</p>

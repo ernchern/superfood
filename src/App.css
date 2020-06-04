@@ -51,9 +51,9 @@ img {
 .primary-btn {
     border: 1px solid transparent;
     border-radius: 10px;
-    color: #ac8fb6;
-    background-color: #ac8fb6;
-    border-color: #ac8fb6;
+    color: #debfe8;
+    background-color: #debfe8;
+    border-color: #debfe8;
     display: inline-block;
     font-size: 16px;
     font-weight: 600;
@@ -61,7 +61,7 @@ img {
     color: #ffffff;
     text-align: center;
     width: 160px;
-    height: 40px;
+    height: 46px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-position: 0 0, 0 100%;
@@ -74,34 +74,15 @@ img {
     z-index: 1;
 }
 
-.primary-btn:after {
-    border: 1px solid transparent;
-    border-radius: 10px;
-    color: #ac8fb6;
-    background-color: #ac8fb6;
-    border-color: #ac8fb6;
-    color: #fff;
-    -webkit-transition-duration: 500ms;
-    -o-transition-duration: 500ms;
-    transition-duration: 500ms;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 1;
-}
 
 .primary-btn:hover {
     border: 1px solid transparent;
     border-radius: 10px;
     color: white;
-    background-color: transparent;
+    background-color: #ac8fb6;
     border-color: #debfe8;
-    color: #fff;
 }
+
 .secondary-btn {
     border: 1px solid transparent;
     border-radius: 10px;
@@ -115,7 +96,7 @@ img {
     color: #ffffff;
     text-align: center;
     width: 200px;
-    height: 40px;
+    height: 46px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-position: 0 0, 0 100%;
@@ -129,26 +110,15 @@ img {
 }
 
 
-.secondary-btn:after {
-    display: inline-block;
-    border: 1px solid transparent;
+
+.secondary-btn:hover {
+    border: 1px solid #8ba072;
     border-radius: 10px;
-    color: #8ba072;
-    background-color: #8ba072;
+    color: black;
+    background-color: #dcedc8;
     border-color: #8ba072;
-    color: #fff;
-    -webkit-transition-duration: 500ms;
-    -o-transition-duration: 500ms;
-    transition-duration: 500ms;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 1;
 }
+
 #preloder {
     position: fixed;
     width: 100%;
@@ -738,4 +708,12 @@ a {
 
 .nutrients-progress {
     height: 65%;
+}
+
+.profile-info {
+    border-top-left-radius: 10%;
+}
+
+.main-page-white {
+    border-radius: 2%;
 }

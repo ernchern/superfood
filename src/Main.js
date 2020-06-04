@@ -31,7 +31,7 @@ class Main extends React.Component{
             <section className="register-section container-box">
                 <div className="container">
                     <Row>
-                        <div className="register-text container-fluid">
+                        <div className="register-text container-fluid main-page-white">
                             <div className="row" style={{paddingLeft: "1%"}}>
                                 <ProfileInfo name={this.state.name} height={this.state.height} weight={this.state.weight}/>
                                 {(!this.state.showRecipe)? 
