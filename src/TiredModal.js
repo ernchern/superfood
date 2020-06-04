@@ -15,12 +15,34 @@ class TiredModal extends React.Component {
         this.setState({ "modal-body recipe": "Hell yeah" });
     }
 
+    showRecipe(event) {
+        <div id="recipes" className="recipe-results">
+            <h5>Recipe:</h5>
+            <p>Leave the oats soak in the milk in the fridge overnight or cook the oats in milk for 5-10 minutes.
+                <br/>Put the berries and nuts on top and enjoy.</p>
+        </div >
+    }
+    
+
+    img(x) {
+        if (x == 1)
+            document.getElementById("results").style.display = 'block';
+        else
+            document.getElementById("results").style.display = 'none';
+        return;
+}
+
     render() {
         return (
             <Modal show={this.props.show}>
                 <div style={{ position: "relative" }}>
                     <h5 className="modal-title">Oats with nuts and berries</h5>
-                    <button className="btnRecipe"> View Recipe</button>
+                    <button className="btnRecipe" onClick={this.img(1)}> View Recipe</button>
+                </div>
+                <div id="results" className="search-results">
+                    <h5>Recipe:</h5>
+                    <p>Leave the oats soak in the milk in the fridge overnight or cook the oats in milk for 5-10 minutes.
+                <br />Put the berries and nuts on top and enjoy.</p>
                 </div>
                 <div className="col-lg-3">
                             <img src="img/breakfast.jpg" className="w-100 image-border" alt="..." />
