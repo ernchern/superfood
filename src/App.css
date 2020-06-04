@@ -573,6 +573,7 @@ a {
     box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, .6);
 }
 
+
 .recipe h5 {
     margin-bottom: 10px;
 }
@@ -695,4 +696,10 @@ a {
     line-height: 45px;
     position: relative;
     z-index: 1;
+}
+
+.headerLucky {
+    background-color: #debfe8;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 1px solid white;
 }

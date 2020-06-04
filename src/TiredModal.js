@@ -27,17 +27,21 @@ class TiredModal extends React.Component {
     render() {
         return (
             <Modal show={this.props.show}>
-                <div style={{ position: "relative" }}>
-                    <h5 className="modal-title">Oats with nuts and berries</h5>
-                    <img src="img/breakfast.jpg" className="w-100 image-border" alt="..." />
+                <div className="row">
+                    <div className="col-lg-9">
+                        <h5 className="modal-title">Oats with nuts and berries</h5>
+                    </div>
+                    <div className="col-lg-3">
+                        <img src="img/breakfast.jpg" className="w-100 image-border" alt="..." />
+                    </div>
                 </div>
-                <div className="col-lg-3">
+                <div className="row-md-1">
                     <button className="btnRecipe" onClick={this.recipe}> View Recipe</button>
                     {
                         this.state.showMe ?
-                            <div style={{ position: "relative" }}>
+                            <div className="row-md-3" style={{ position: "relative" }}>
                                 <h5>Recipe:</h5>
-                                <p>Leave the oats soak in the milk in the fridge overnight or cook the oats in milk for 5-10 minutes.
+                                <p className="recipe-text">Leave the oats soak in the milk in the fridge overnight or cook the oats in milk for 5-10 minutes.
                 <br />Put the berries and nuts on top and enjoy.</p>
                             </div>
                             : null
