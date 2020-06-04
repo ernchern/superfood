@@ -5,31 +5,17 @@ import {Modal} from 'react-bootstrap';
 class TiredModal extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {"modal-title": "Oats with nuts and berries"};
-        this.changeContent = this.changeContent.bind(this)
-    }
-
-    changeContent(event) {
-        alert(this.props)
-        this.setState({ "modal-title": "Deez Nuts" });
-        this.setState({ "modal-body recipe": "Hell yeah" });
-    }
-
-    showRecipe(event) {
-        <div id="recipes" className="recipe-results">
-            <h5>Recipe:</h5>
-            <p>Leave the oats soak in the milk in the fridge overnight or cook the oats in milk for 5-10 minutes.
-                <br/>Put the berries and nuts on top and enjoy.</p>
-        </div >
+        this.state = {
+            showMe: false
+        }
+        this.recipe = this.recipe.bind(this);
     }
     
 
-    img(x) {
-        if (x == 1)
-            document.getElementById("results").style.display = 'block';
-        else
-            document.getElementById("results").style.display = 'none';
-        return;
+    recipe() {
+        this.setState({
+            showMe:!this.state.showMe
+        })
 }
 
     render() {
@@ -37,15 +23,19 @@ class TiredModal extends React.Component {
             <Modal show={this.props.show}>
                 <div style={{ position: "relative" }}>
                     <h5 className="modal-title">Oats with nuts and berries</h5>
-                    <button className="btnRecipe" onClick={this.img(1)}> View Recipe</button>
-                </div>
-                <div id="results" className="search-results">
-                    <h5>Recipe:</h5>
-                    <p>Leave the oats soak in the milk in the fridge overnight or cook the oats in milk for 5-10 minutes.
-                <br />Put the berries and nuts on top and enjoy.</p>
+                    <img src="img/breakfast.jpg" className="w-100 image-border" alt="..." />
                 </div>
                 <div className="col-lg-3">
-                            <img src="img/breakfast.jpg" className="w-100 image-border" alt="..." />
+                    <button className="btnRecipe" onClick={this.recipe}> View Recipe</button>
+                    {
+                        this.state.showMe ?
+                            <div>
+                                <h5>Recipe:</h5>
+                                <p>Leave the oats soak in the milk in the fridge overnight or cook the oats in milk for 5-10 minutes.
+                <br />Put the berries and nuts on top and enjoy.</p>
+                            </div>
+                            : null
+                    }
                 </div>
                 <div className="modal-body recipe">
                             <h5>Ingredients:</h5>
