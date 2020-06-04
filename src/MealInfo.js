@@ -42,6 +42,7 @@ class MealInfo extends React.Component{
             <div className="col-sm-8 recipe-pane">
                 <div className="container">
                     <nav>
+                    <div class="row align-content-center"><div class="col-3 dateDiv align-content-center"></div><div class="col-6 dateDiv align-content-center"><button class="primary-btn fillDiv">Today</button></div><div class="col-3 dateDiv align-content-center"></div></div>
                         <div className="row align-content-center">
                             <div className="col-3">
                             <button className="primary-btn fillDiv " onClick={() => this.changeDate(-1)}>Previous day</button>
@@ -53,14 +54,7 @@ class MealInfo extends React.Component{
                                 <button className="primary-btn fillDiv" onClick={() => this.changeDate(1)}>Next day</button>
                             </div> 
                         </div>
-                        <div className="row align-content-center">
-                        <div className="col-3 dateDiv align-content-center"></div>
-                            <div className="col-6 dateDiv align-content-center">
-                            <button className="primary-btn fillDiv" onClick={() => this.setState({date: new Date()})}>
-                               Today</button>
-                            </div>
-                            <div className="col-3 dateDiv align-content-center"></div>
-                        </div>
+                        
                         {/* <div className="row nav nav-tabs nav-fill align-content-center" id="nav-tab" role="tablist">
                             <a className="nav-item nav-link active" data-toggle="tab" href="#nav-yest" role="tab" aria-controls="nav-yest" aria-selected="true">Yesterday</a>
                             <a className="nav-item nav-link" data-toggle="tab" href="#nav-today" role="tab" aria-controls="nav-today" aria-selected="false">Today</a>

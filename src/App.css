@@ -97,8 +97,8 @@ img {
 .primary-btn:hover {
     border: 1px solid transparent;
     border-radius: 10px;
-    color: #debfe8;
-    background-color: #debfe8;
+    color: white;
+    background-color: transparent;
     border-color: #debfe8;
     color: #fff;
 }
@@ -509,7 +509,8 @@ img {
 
 .left-column {
     background-color: #faf5fa;
-    padding: 30px;
+    padding: 20px;
+    padding-bottom: 0px;
 }
 
 .left-column h5 {
@@ -706,4 +707,35 @@ a {
 
 .div-bg {
     overflow-y: hidden;
+}
+
+.logout-column {
+    text-align: right;
+}
+
+.logout-button {
+    border-radius: 5px;
+    border: 1px solid #ac8fb6;
+    min-height: 35px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.logout-button:hover {
+    border-radius: 5px;
+    border: 1px solid #ac8fb6;
+    min-height: 35px;
+    background-color: #fff2ff;
+}
+
+.meal {
+
+}
+
+.meal:hover {
+    border: 2px solid #ccc;
+} 
+
+.nutrients-progress {
+    height: 65%;
 }

@@ -31,7 +31,7 @@ class NutrientIntake extends React.Component {
                         <a className={(this.state.showMode === "monthly")? "nav-item nav-link active" : "nav-item nav-link"} onClick={() => this.setShowMode("monthly")}>Monthly</a>
                     </div>
                 </nav>
-                <div className="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                <div className="tab-content py-3 px-3 px-sm-0 nutrients-progress" id="nav-tabContent">
                     <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                         <div className="row">
                             <div className="col-sm-3">
