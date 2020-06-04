@@ -32,7 +32,7 @@ class Main extends React.Component{
                 <div className="container">
                     <Row>
                         <div className="register-text container-fluid main-page-white">
-                            <div className="row" style={{paddingLeft: "1%"}}>
+                            <div className="row" style={{paddingLeft: "3%"}}>
                                 <ProfileInfo name={this.state.name} height={this.state.height} weight={this.state.weight}/>
                                 {(!this.state.showRecipe)? 
                                 <MealInfo currentDate={this.state.date} toggleRecipeMode={this.toggleRecipeMode}/> : 

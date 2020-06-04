@@ -42,15 +42,18 @@ class MealInfo extends React.Component{
             <div className="col-sm-8 recipe-pane">
                 <div className="container">
                     <nav>
-                    <div class="row align-content-center"><div class="col-3 dateDiv align-content-center"></div><div class="col-6 dateDiv align-content-center"><button class="primary-btn fillDiv">Today</button></div><div class="col-3 dateDiv align-content-center"></div></div>
-                        <div className="row align-content-center">
-                            <div className="col-3">
-                            <button className="primary-btn fillDiv " onClick={() => this.changeDate(-1)}>Previous day</button>
-                            </div>
-                            <div className="col-6 dateDiv" onClick={() => this.setState({date: new Date()})}>
+                    <div class="row align-content-center"><div class="col-3 dateDiv align-content-center"></div>
+                    <div className="col-6 dateDiv" onClick={() => this.setState({date: new Date()})}>
                                {this.formatDate()}
                             </div>
-                            <div className="col-3">
+                    <div class="col-3 dateDiv align-content-center"></div></div>
+                        <div className="row align-content-center">
+                            <div className="col-4">
+                            <button className="primary-btn fillDiv " onClick={() => this.changeDate(-1)}>Previous day</button>
+                            </div>
+                            <div class="col-4 dateDiv align-content-center"><button class="primary-btn fillDiv">Today</button></div>
+
+                            <div className="col-4">
                                 <button className="primary-btn fillDiv" onClick={() => this.changeDate(1)}>Next day</button>
                             </div> 
                         </div>
@@ -63,7 +66,7 @@ class MealInfo extends React.Component{
                     </nav>
                     <div className="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
                         <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                            <div className="container">
+                            <div className="single-meal container ">
                                 <div onClick={(event) => this.props.toggleRecipeMode(event, "breakfast")}>
                                     <Meal type={"Breakfast"} changeModal={this.changeModal} modalType={"modalBreakfast"}/>
                                 </div>

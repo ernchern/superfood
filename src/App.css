@@ -51,14 +51,13 @@ img {
 .primary-btn {
     border: 1px solid transparent;
     border-radius: 10px;
-    color: #debfe8;
-    background-color: #debfe8;
-    border-color: #debfe8;
+    color: #6b6b6b;
+    background-color: #dcedc8;
+    border-color: #dcedc8;
     display: inline-block;
     font-size: 16px;
     font-weight: 600;
     padding: 0 12px;
-    color: #ffffff;
     text-align: center;
     width: 160px;
     height: 46px;
@@ -78,9 +77,8 @@ img {
 .primary-btn:hover {
     border: 1px solid transparent;
     border-radius: 10px;
-    color: white;
-    background-color: #ac8fb6;
-    border-color: #debfe8;
+    background-color: #dcedc8;
+    border-color: #8ba072;
 }
 
 .secondary-btn {
@@ -208,7 +206,7 @@ img {
 .check-icon {
     margin-right: 2px;
     display: inline-block;
-    color: #ac8fb6;
+    color: #fff;
 }
 
 .bottom {
@@ -295,7 +293,7 @@ img {
     border: 0px;
     width: 100%;
     height: 35px;
-    background-color: #ac8fb6;
+    background-color: #b7caa2;
     padding-right: 0;
     padding-left: 0;
     padding-top: 5px;
@@ -307,7 +305,7 @@ img {
     border: 0px;
     width: 100%;
     height: 35px;
-    background-color: #debfe8;
+    background-color: #b7caa2;
     padding-right: 0;
     padding-left: 0;
 }
@@ -323,9 +321,9 @@ img {
     color: #ffffff;
     font-weight: 600;
     width: 100%;
-    background: -webkit-gradient(linear, left top, right top, from(#debfe8), to(#ac8fb6));
-    background: -o-linear-gradient(left, #debfe8, #ac8fb6);
-    background: linear-gradient(to right, #debfe8, #ac8fb6);
+    background: -webkit-gradient(linear, left top, right top, from(#b7caa2), to(#8ba072));
+    background: -o-linear-gradient(left, #b7caa2, #8ba072);
+    background: linear-gradient(to right, #b7caa2, #8ba072);
     border: none;
     padding: 12px 0;
     cursor: pointer;
@@ -453,7 +451,7 @@ img {
     color: #fff;
     text-align: center;
     white-space: nowrap;
-    background-color: #ac8fb6;
+    background-color: #8ba072;
     transition: width .6s ease;
 }
 
@@ -478,7 +476,7 @@ img {
 }
 
 .left-column {
-    background-color: #faf5fa;
+    background-color: #f3f3f3;
     padding: 20px;
     padding-bottom: 0px;
 }
@@ -555,7 +553,7 @@ a {
 }
 
 .headerRecipe {
-    background-color: #debfe8;
+    background-color: #b7caa2;
     border-radius: 15px 15px 0px 0px;
     border-bottom: 1px solid white;
 }
@@ -574,7 +572,7 @@ a {
 }
 
 .colRecipe {
-    background-color: #fff2ff;
+    background-color: #f1f1f1;
     border-bottom: 1px solid white;
 }
 
@@ -624,10 +622,6 @@ a {
 	background-color: #dcedc8;
 }
 
-.date-btn {
-	background-color: #ac8fb6;
-    border-color: #ac8fb6;
-}
 
 .btnSuggestion {
     display: inline-block;
@@ -675,7 +669,7 @@ a {
     border-bottom: 1px solid white;
 }
 
-.div-bg {
+.div-bg-m {
     overflow-y: hidden;
 }
 
@@ -685,7 +679,7 @@ a {
 
 .logout-button {
     border-radius: 5px;
-    border: 1px solid #ac8fb6;
+    border: 1px solid #b7caa2;
     min-height: 35px;
     background-color: white;
     margin-top: 10px;
@@ -693,9 +687,9 @@ a {
 
 .logout-button:hover {
     border-radius: 5px;
-    border: 1px solid #ac8fb6;
+    border: 1px solid #b7caa2;
     min-height: 35px;
-    background-color: #fff2ff;
+    background-color: #f1f1f1;
 }
 
 .meal {
@@ -715,5 +709,9 @@ a {
 }
 
 .main-page-white {
-    border-radius: 2%;
+    border-radius: 5%;
+}
+
+.single-meal {
+    padding: 0px!important;
 }
