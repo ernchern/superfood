@@ -30,7 +30,8 @@ class Register extends React.Component {
         var page = this.state.states[this.state.currId];
         var responses = this.state.responses;
         if (page === "personal") {
-			if ("name" in responses && "lastName" in responses && "email" in responses && "mobile" in responses && "country" in responses) {
+			if (true) {
+			/*if ("name" in responses && "lastName" in responses && "email" in responses && "mobile" in responses && "country" in responses) {*/
                 this.setState({currId: this.state.currId + 1});
             } else {
                 alert("Error");

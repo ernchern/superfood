@@ -48,8 +48,8 @@ class PersonalRegister extends React.Component {
                                     </Col>
                                     <Col lg="6">
                                         <label>Country</label>
-										<Select placeholder={<div></div>} styles={ {valueContainer: base => ({ ...base, height:'46px'})}} 
-										options={countries} values={[]} onChange={(value) => this.props.setResponse("country", value.label)} />
+										<Select maxMenuHeight="1000" placeholder={<div></div>} styles={ {valueContainer: base => ({height:'46px', paddingLeft:'10px'})}} 
+										options={countries} onChange={(value) => this.props.setResponse("country", value.label)} />
                                     </Col>
                                     <Col lg="6">
                                         <label>Weight (optional)</label>

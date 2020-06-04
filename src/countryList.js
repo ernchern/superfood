@@ -136,8 +136,8 @@ var countries = [
   { value: 'India', label: 'India' },
   { value: 'Indonesia', label: 'Indonesia' },
   {
-    value: 'Iran (Islamic Republic of)',
-    label: 'Iran (Islamic Republic of)'
+    value: 'Iran',
+    label: 'Iran'
   },
   { value: 'Iraq', label: 'Iraq' },
   { value: 'Ireland', label: 'Ireland' },
@@ -151,14 +151,6 @@ var countries = [
   { value: 'Kazakhstan', label: 'Kazakhstan' },
   { value: 'Kenya', label: 'Kenya' },
   { value: 'Kiribati', label: 'Kiribati' },
-  {
-    value: "Korea (the Democratic People's Republic of)",
-    label: "Korea (the Democratic People's Republic of)"
-  },
-  {
-    value: 'Korea (the Republic of)',
-    label: 'Korea (the Republic of)'
-  },
   { value: 'Kuwait', label: 'Kuwait' },
   { value: 'Kyrgyzstan', label: 'Kyrgyzstan' },
   {
@@ -283,6 +275,10 @@ var countries = [
     value: 'South Georgia and the South Sandwich Islands',
     label: 'South Georgia and the South Sandwich Islands'
   },
+  {
+    value: 'South Korea',
+    label: 'South Korea'
+  },
   { value: 'South Sudan', label: 'South Sudan' },
   { value: 'Spain', label: 'Spain' },
   { value: 'Sri Lanka', label: 'Sri Lanka' },
@@ -318,27 +314,23 @@ var countries = [
   { value: 'Uganda', label: 'Uganda' },
   { value: 'Ukraine', label: 'Ukraine' },
   {
-    value: 'United Arab Emirates (the)',
-    label: 'United Arab Emirates (the)'
+    value: 'United Arab Emirates',
+    label: 'United Arab Emirates'
   },
   {
-    value: 'United Kingdom of Great Britain and Northern Ireland (the)',
-    label: 'United Kingdom of Great Britain and Northern Ireland (the)'
+    value: 'United Kingdom',
+    label: 'United Kingdom)'
   },
   {
-    value: 'United States Minor Outlying Islands (the)',
-    label: 'United States Minor Outlying Islands (the)'
-  },
-  {
-    value: 'United States of America (the)',
-    label: 'United States of America (the)'
+    value: 'United States of America',
+    label: 'United States of America'
   },
   { value: 'Uruguay', label: 'Uruguay' },
   { value: 'Uzbekistan', label: 'Uzbekistan' },
   { value: 'Vanuatu', label: 'Vanuatu' },
   {
-    value: 'Venezuela (Bolivarian Republic of)',
-    label: 'Venezuela (Bolivarian Republic of)'
+    value: 'Venezuela',
+    label: 'Venezuela'
   },
   { value: 'Viet Nam', label: 'Viet Nam' },
   {

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Col, Row, Container } from 'react-bootstrap';
+import Fade from 'react-reveal/Fade';
 
 class DiseaseRegister extends React.Component {
     constructor(props) {
@@ -14,23 +15,31 @@ class DiseaseRegister extends React.Component {
 	  this.props.setResponse("hypertension",false);
 	  
 	  this.showOptions = this.showOptions.bind(this);
+	  this.hideOptions = this.hideOptions.bind(this);
     }
 	
 	showOptions() {
 		this.setState({disease:true});
+	}
+	
+	hideOptions() {
+		this.setState({disease:false});
 	}
   
     render() { 
 		const disease = this.state.disease;
 		let options;
 		if (disease) {
-			options = <div>
+			options = 
+			<Fade>
+			<div>
 				<p className="question">Choose type(s) of health restriction:</p>
 				<div>
 				  <label className="checkbox-inline"><input type="checkbox" onChange={(event) => this.props.setResponse("diabetes",event.target.checked)}/>Diabetes</label>
 				  <label className="checkbox-inline"><input type="checkbox" onChange={(event) => this.props.setResponse("hypertension", event.target.checked)}/>Hypertension</label>
 				</div>
-			</div>;
+			</div>
+			</Fade>;
 		} else {
 			options = <div></div>;
 		}
@@ -58,7 +67,7 @@ class DiseaseRegister extends React.Component {
 											<p className="question">Do you have any health restriction?</p>
 											<div>
 											  <label className="radio-inline"><input type="radio" name="disease" onChange={this.showOptions}/>Yes</label>
-											  <label className="radio-inline"><input type="radio" name="disease"/>No</label>
+											  <label className="radio-inline"><input type="radio" name="disease" onChange={this.hideOptions}/>No</label>
 											</div>
 										</div>
 									</Col>
