@@ -28,7 +28,7 @@ class TiredModal extends React.Component {
         return (
             <Modal show={this.props.show}>
                 <div className="row">
-                    <div className="col-sm-9">
+                    <div className="col-sm-9" style={{ paddingLeft: '30px' }}>
                         <p className="text-vertical-center">
                             Oats with nuts and berries
                             </p>
@@ -40,7 +40,7 @@ class TiredModal extends React.Component {
                         <img src="img/breakfast.jpg" className="w-100 image-border" alt="..." />
                     </div>
                 </div>
-                <div className="row-md-1">
+                <div className="row-md-1" style={{ paddingLeft: '16px' }}>
                     {
                         this.state.showMe ?
                             <div className="row-md-3" style={{ position: "relative" }}>
