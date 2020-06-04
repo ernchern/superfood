@@ -676,3 +676,23 @@ a {
     position: relative;
     z-index: 1;
 }
+
+.btnRecipe {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0;
+    border: 4000;
+    border-color: #ffffff;
+    background-color: #dcedc8;
+    color: #ffffff;
+    text-align: center;
+    width: 120px;
+    height: 46px;
+    -webkit-transition-duration: 1000ms;
+    -o-transition-duration: 1000ms;
+    transition-duration: 1000ms;
+    line-height: 45px;
+    position: relative;
+    z-index: 1;
+}

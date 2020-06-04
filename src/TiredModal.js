@@ -18,10 +18,11 @@ class TiredModal extends React.Component {
     render() {
         return (
             <Modal show={this.props.show}>
-                        <div >
+                <div style={{ position: "relative" }}>
                     <h5 className="modal-title">Oats with nuts and berries</h5>
+                    <button className="btnRecipe"> View Recipe</button>
                 </div>
-                <div>
+                <div className="col-lg-3">
                             <img src="img/breakfast.jpg" className="w-100 image-border" alt="..." />
                 </div>
                 <div className="modal-body recipe">
@@ -29,12 +30,12 @@ class TiredModal extends React.Component {
                             <p>Oats, Berries(blueberries/strawberries), Almond milk, Nuts</p>
                             <h5>Nutrients:</h5>
                     <p>Protein: 10g, Carbohydrates: 12g, Fats: 5g</p>
-                    </div>
-                        <div className="modal-footer">
+                </div>
+                <div className="modal-footer">
                             <button className="btn btn-primary" onClick={() => this.props.changeModal(this.props.modalType)}>Confirm</button>
                             <button className="btnSuggestion" onClick={this.changeContent}>Give me another suggestion!</button>
                             <button className="btn btn-secondary" onClick={() => this.props.changeModal(this.props.modalType)}>Close</button>
-                        </div>
+                </div>
             </Modal>
         )
     }
