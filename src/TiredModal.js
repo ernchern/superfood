@@ -16,7 +16,13 @@ class TiredModal extends React.Component {
         this.setState({
             showMe:!this.state.showMe
         })
-}
+    }
+
+    close() {
+        this.setState({
+            showMe: false
+        })
+    }
 
     render() {
         return (
@@ -29,7 +35,7 @@ class TiredModal extends React.Component {
                     <button className="btnRecipe" onClick={this.recipe}> View Recipe</button>
                     {
                         this.state.showMe ?
-                            <div>
+                            <div style={{ position: "relative" }}>
                                 <h5>Recipe:</h5>
                                 <p>Leave the oats soak in the milk in the fridge overnight or cook the oats in milk for 5-10 minutes.
                 <br />Put the berries and nuts on top and enjoy.</p>
@@ -44,9 +50,9 @@ class TiredModal extends React.Component {
                     <p>Protein: 10g, Carbohydrates: 12g, Fats: 5g</p>
                 </div>
                 <div className="modal-footer">
-                            <button className="btn btn-primary" onClick={() => this.props.changeModal(this.props.modalType)}>Confirm</button>
+                    <button className="btn btn-primary" onClick={() => { this.close(); this.props.changeModal(this.props.modalType) }}>Confirm</button>
                             <button className="btnSuggestion" onClick={this.changeContent}>Give me another suggestion!</button>
-                            <button className="btn btn-secondary" onClick={() => this.props.changeModal(this.props.modalType)}>Close</button>
+                    <button className="btn btn-secondary" onClick={() => { this.close(); this.props.changeModal(this.props.modalType) }}>Close</button>
                 </div>
             </Modal>
         )
