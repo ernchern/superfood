@@ -26,8 +26,8 @@ class TiredModal extends React.Component {
 
     render() {
         return (
-            <Modal show={this.props.show}>
-                <view className="row">
+            <Modal show={this.props.show} style={{ minHeight: "300px" }}>
+                <view className="row" style={{ minHeight: "100px" }}>
                     <view className = "col-9">
                         <p className="text-vertical-center">
                             Oats with nuts and berries
@@ -49,13 +49,13 @@ class TiredModal extends React.Component {
                             : null
                     }
                 </view>
-                <view>
+                <view style={{ minHeight: "100px" }}>
                             <h5>Ingredients:</h5>
                             <p>Oats, Berries(blueberries/strawberries), Almond milk, Nuts</p>
                             <h5>Nutrients:</h5>
                     <p>Protein: 10g, Carbohydrates: 12g, Fats: 5g</p>
                 </view>
-                <view className="modal-footer" style={{ border: "none" }}>
+                <view className="modal-footer" style={{ border: "none" , minHeight: "100px"}}>
                     <button className="confirm-btn" onClick={() => { this.close(); this.props.changeModal(this.props.modalType) }}>Confirm</button>
                             <button className="suggestion-btn" onClick={this.changeContent}>Give me another suggestion!</button>
                     <button className="cancel-btn" onClick={() => { this.close(); this.props.changeModal(this.props.modalType) }}>Cancel</button>
