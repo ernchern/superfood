@@ -33,25 +33,27 @@ class MealInfo extends React.Component{
 
     changeDate(change) {
         var newDate = new Date(this.state.date.getFullYear(), this.state.date.getMonth(), this.state.date.getDate() + change);
+        this.props.generateDailyMeals(newDate);
         this.setState({date: newDate});
 
     }
 
     render() {
+        var dailyMeal = this.props.meals[this.formatDate()];
         return (
             <div className="col-sm-8 recipe-pane">
                 <div className="container">
                     <nav>
-                    <div class="row align-content-center"><div class="col-3 dateDiv align-content-center"></div>
+                    <div className="row align-content-center"><div className="col-3 dateDiv align-content-center"></div>
                     <div className="col-6 dateDiv" onClick={() => this.setState({date: new Date()})}>
                                {this.formatDate()}
                             </div>
-                    <div class="col-3 dateDiv align-content-center"></div></div>
+                    <div className="col-3 dateDiv align-content-center"></div></div>
                         <div className="row align-content-center">
                             <div className="col-4">
                             <button className="primary-btn fillDiv " onClick={() => this.changeDate(-1)}>Previous day</button>
                             </div>
-                            <div class="col-4 dateDiv align-content-center"><button class="primary-btn fillDiv">Today</button></div>
+                            <div className="col-4 dateDiv align-content-center"><button className="primary-btn fillDiv" onClick={() => this.setState({date: this.props.currentDate})}>Today</button></div>
 
                             <div className="col-4">
                                 <button className="primary-btn fillDiv" onClick={() => this.changeDate(1)}>Next day</button>
@@ -67,17 +69,20 @@ class MealInfo extends React.Component{
                     <div className="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
                         <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                             <div className="single-meal container ">
-                                <div onClick={(event) => this.props.toggleRecipeMode(event, "breakfast")}>
-                                    <Meal type={"Breakfast"} changeModal={this.changeModal} modalType={"modalBreakfast"}/>
+                                <div onClick={(event) => this.props.toggleRecipeMode(event, dailyMeal["breakfast"])}>
+                                    <Meal type={"Breakfast"} changeModal={this.changeModal} modalType={"modalBreakfast"}
+                                        meal={dailyMeal["breakfast"]}/>
                                 </div>
                                 <TiredModal show={this.state.modalBreakfast} changeModal={this.changeModal} modalType={"modalBreakfast"}/>
-                                <div onClick={(event) => this.props.toggleRecipeMode(event, "lunch")}>
-                                    <Meal type={"Lunch"} changeModal={this.changeModal} modalType={"modalLunch"}/>
+                                <div onClick={(event) => this.props.toggleRecipeMode(event, dailyMeal.lunch)}>
+                                    <Meal type={"Lunch"} changeModal={this.changeModal} modalType={"modalLunch"}
+                                        meal={dailyMeal.lunch}/>
                                 </div>
                                 <TiredModal show={this.state.modalLunch} changeModal={this.changeModal} modalType={"modalLunch"}/>
 
-                                <div onClick={(event) => this.props.toggleRecipeMode(event, "dinner")}>
-                                    <Meal type={"Dinner"} changeModal={this.changeModal} modalType={"modalDinner"}/>
+                                <div onClick={(event) => this.props.toggleRecipeMode(event, dailyMeal.dinner)}>
+                                    <Meal type={"Dinner"} changeModal={this.changeModal} modalType={"modalDinner"}
+                                    meal={dailyMeal.dinner}/>
                                 </div>
                                 <TiredModal show={this.state.modalDinner} changeModal={this.changeModal} modalType={"modalDinner"}/>
                             </div>

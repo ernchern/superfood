@@ -15,7 +15,7 @@ class ProfileInfo extends React.Component{
                     <p>{this.props.name}</p>
                     <p>Height: {this.props.height}</p>
                     <p>Weight: {this.props.weight}</p>
-                    <div class = "contatiner row">
+                    <div className="contatiner row">
                         <div className="col-sm-6 left-column">
                         <button className="profile-button">Edit Profile</button>
                         </div>

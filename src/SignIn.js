@@ -24,7 +24,7 @@ class SignIn extends React.Component {
                                         <input type="password" onChange={(event) => this.props.setResponse("pw", event.target.value)}/>
                                     </Col>
                                 </Row>
-                                <p className="btn register-btn" onClick={() => this.props.setStage("main")}>Sign In</p>
+                                <p className="btn register-btn" onClick={() => this.props.setPage("main")}>Sign In</p>
                             </form>
                         </div>
                     </Col>

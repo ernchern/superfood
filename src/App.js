@@ -21,11 +21,13 @@ class App extends React.Component {
 
   componentDidMount() {
     firebase.initializeApp(config);
-    firebase.database().ref("/").on("value", function (snapshot) {
-      console.log(snapshot.val());
+    var recipes;
+    firebase.database().ref("/").on("value", (snapshot) => {
+      this.setState({recipes: snapshot.val().recipes});
     }, function (error) {
       console.log(error);
     });
+   
   }
 
   setPage(page) {
@@ -53,7 +55,7 @@ class App extends React.Component {
         content = <SignIn setPage={this.setPage} setResponse={this.setSignInInfo}/>;
         break;
       case "main":
-        content = <Main/>;
+        content = <Main recipes={this.state.recipes}/>;
         break;
       default:
         content = <h1>Error</h1>;
