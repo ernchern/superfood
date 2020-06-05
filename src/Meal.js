@@ -20,7 +20,7 @@ class Meal extends React.Component{
                     <h5 className="mt-0">{this.props.type}</h5>
                     <h6 className="mt-0">{this.props.meal.name}</h6>
                     <p>Ingredients: {ingredients}. <br/> 
-                    Nutrients: Protein: {this.props.meal.protein}g, Sodium: {this.props.meal.sodium}g, Fats: {this.props.meal.fat}g</p>
+                    Nutrients: Protein: {this.props.meal.protein}g, Sodium: {this.props.meal.sodium}mg, Fats: {this.props.meal.fat}g</p>
                     <button id="tiredButton" className="secondary-btn" onClick={() => this.props.changeModal(this.props.modalType)}>I want something new!</button>
                 </div>
             </div>
