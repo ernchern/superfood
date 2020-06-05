@@ -878,3 +878,9 @@ a {
     z-index: 1;
 	margin-right:10px;
 }
+
+.pw-input {
+	-webkit-text-security: disc;
+	-moz-text-security: disc;
+	text-security: disc;
+}

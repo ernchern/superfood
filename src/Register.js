@@ -3,6 +3,7 @@ import './App.css';
 import PersonalRegister from './PersonalRegister';
 import AllergyRegister from './AllergyRegister';
 import DiseaseRegister from './DiseaseRegister.js';
+import ReactEncrypt from 'react-encrypt';
 
 class Register extends React.Component {
     constructor(props) {
@@ -37,7 +38,7 @@ class Register extends React.Component {
                 alert("Error");
             }
 		} else if (page === "diseases") {
-			alert("submit")
+			alert('submit')
         } else {
             this.setState({currId: this.state.currId + 1});
         }
@@ -57,7 +58,12 @@ class Register extends React.Component {
         let content;
         switch (page) {
             case "personal":
-                content = <PersonalRegister setResponse={this.setResponse} nextStage={this.nextStage} goToId={this.goToId}/>;
+                content = 
+				<ReactEncrypt
+				encryptKey={"ewfWE@#%$rfdsefgdsf"}
+				>
+				<PersonalRegister setResponse={this.setResponse} nextStage={this.nextStage} goToId={this.goToId}/>
+				</ReactEncrypt>
                 break;
             case "allergy":
                 content = <AllergyRegister setResponse={this.setResponse} nextStage={this.nextStage} goToId={this.goToId}/>
