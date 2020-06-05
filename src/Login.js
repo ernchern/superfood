@@ -23,7 +23,9 @@ class Login extends React.Component {
 						<button className="login-button" onClick={() => this.props.setPage("register")}>
 							<span className="register-button">Register now</span>
 						</button>
-						<button className="signin-button"><span>Sign In</span></button>
+						<button className="signin-button" onClick={() => this.props.setPage("signIn")}>
+							<span>Sign In</span>
+						</button>
 					</div>
 				</div>
             </Container>
