@@ -623,27 +623,39 @@ a {
 }
 
 
-.btnSuggestion {
+.suggestion-btn {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #4e7934;
+    border-color: #4e7934;
     display: inline-block;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     padding: 0;
     border: 4000;
-    border-color: #ffffff;
-    background-color: #66ccff;
-    color: #ffffff;
     text-align: center;
     width: 240px;
-    height: 46px;
-    -webkit-transition-duration: 1000ms;
-    -o-transition-duration: 1000ms;
-    transition-duration: 1000ms;
-    line-height: 45px;
+    height: 38px;
+    -webkit-transition-duration: 800ms;
+    -o-transition-duration: 800ms;
+    transition-duration: 800ms;
+    line-height: 36px;
     position: relative;
     z-index: 1;
 }
 
-.btnRecipe {
+    .suggestion-btn:hover {
+        border: 1px solid #4e7934;
+        border-radius: 5px;
+        color: #ffffff;
+        background-color: #1a4709;
+        border-color: #4e7934;
+    }
+
+.recipe-btn {
+    border: 1px solid transparent;
+    border-radius: 5px;
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
@@ -651,16 +663,94 @@ a {
     border: 4000;
     border-color: #ffffff;
     background-color: #dcedc8;
-    color: #ffffff;
+    color: #6b6b6b;
     text-align: center;
     width: 120px;
-    height: 46px;
-    -webkit-transition-duration: 1000ms;
-    -o-transition-duration: 1000ms;
-    transition-duration: 1000ms;
-    line-height: 45px;
+    height: 40px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    -webkit-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+    line-height: 38px;
     position: relative;
     z-index: 1;
+}
+
+    .recipe-btn:hover {
+        border: 1px solid #8ba072;
+        border-radius: 5px;
+        color: #6b6b6b;
+        background-color: #dcedc8;
+        border-color: #8ba072;
+    }
+
+.cancel-btn {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #8ba072;
+    border-color: #8ba072;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 12px;
+    color: #ffffff;
+    text-align: center;
+    width: 90px;
+    height: 38px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    -webkit-transition-duration: 800ms;
+    -o-transition-duration: 800ms;
+    transition-duration: 800ms;
+    line-height: 36px;
+    position: relative;
+    z-index: 1;
+}
+
+    .cancel-btn:hover {
+        border: 1px solid #8ba072;
+        border-radius: 5px;
+        color: #ffffff;
+        background-color: #1a4709;
+        border-color: #8ba072;
+    }
+
+.confirm-btn {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #4d7e29;
+    border-color: #4d7e29;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 12px;
+    color: #ffffff;
+    text-align: center;
+    width: 90px;
+    height: 38px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    -webkit-transition-duration: 800ms;
+    -o-transition-duration: 800ms;
+    transition-duration: 800ms;
+    line-height: 36px;
+    position: relative;
+    z-index: 1;
+}
+
+.confirm-btn:hover {
+    border: 1px solid #4d7e29;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #1a4709;
+    border-color: #4d7e29;
 }
 
 .headerLucky {

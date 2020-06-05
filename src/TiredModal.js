@@ -28,12 +28,12 @@ class TiredModal extends React.Component {
         return (
             <Modal show={this.props.show}>
                 <div className="row">
-                    <div className="col-sm-9" style={{ paddingLeft: '30px' }}>
+                    <div className="col-sm-9" style={{ paddingLeft: '30px'}}>
                         <p className="text-vertical-center">
                             Oats with nuts and berries
                             </p>
                         <p className="small-margin">
-                        <button className="btnRecipe" onClick={this.recipe}> View Recipe</button>
+                        <button className="recipe-btn" onClick={this.recipe}> View Recipe</button>
                     </p>
                     </div>
                     <div className="col-sm-3">
@@ -58,9 +58,9 @@ class TiredModal extends React.Component {
                     <p>Protein: 10g, Carbohydrates: 12g, Fats: 5g</p>
                 </div>
                 <div className="modal-footer">
-                    <button className="btn btn-primary" onClick={() => { this.close(); this.props.changeModal(this.props.modalType) }}>Confirm</button>
-                            <button className="btnSuggestion" onClick={this.changeContent}>Give me another suggestion!</button>
-                    <button className="btn btn-secondary" onClick={() => { this.close(); this.props.changeModal(this.props.modalType) }}>Close</button>
+                    <button className="confirm-btn" onClick={() => { this.close(); this.props.changeModal(this.props.modalType) }}>Confirm</button>
+                            <button className="suggestion-btn" onClick={this.changeContent}>Give me another suggestion!</button>
+                    <button className="cancel-btn" onClick={() => { this.close(); this.props.changeModal(this.props.modalType) }}>Cancel</button>
                 </div>
             </Modal>
         )
@@ -69,39 +69,46 @@ class TiredModal extends React.Component {
     /*render() {
         return (
             <Modal show={this.props.show}>
-                <div className="modal-dialog modal-dialog-centered">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title">Oats with nuts and berries</h5>
-                            <img src="img/breakfast.jpg" className="w-100" alt="..." />
-                            <button type="button" className="close" aria-label="Close" onClick={() => this.props.changeModal(this.props.modalType)}>
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div className="modal-body recipe">
-                            <h5>You will need:</h5>
-                            <p>Oats: 30g(Protein: 1g Carbohydrates: 12g Fats: 1g)
-                                <br />Berries(blueberries/strawberries): 100g(Protein: 1g Carbohydrates: 12g Fats: 1g)
-                                <br />Almond milk: 100(Protein: 1g Carbohydrates: 12g Fats: 1g)g
-                                <br />Nuts: 20g(Protein: 1g Carbohydrates:
-                                12g Fats: 1g)</p>
-                            <h5>Recipe:</h5>
-                            <p>Leave the oats soak in the milk in the fridge overnight or cook the oats in milk for 5-10 minutes. Put the berries and nuts on top and enjoy.</p>
-                            <h5>Total nutrients:</h5>
-                            <p>Protein: 10g
-                                <br />Carbohydrates: 12g
-                                <br />Fats: 5g</p>
-                        </div>
-                        <div className="modal-footer">
-                            <button className="btn btn-primary" onClick={() => this.props.changeModal(this.props.modalType)}>Confirm</button>
-                            <button className="btnSuggestion" onClick={this.changeContent}>Give me another suggestion!</button>
-                            <button className="btn btn-secondary" onClick={() => this.props.changeModal(this.props.modalType)}>Close</button>
-                        </div>
+                <div className="row">
+                    <div className="col-sm-9" style={{ paddingLeft: '30px' }}>
+                        <p className="text-vertical-center">
+                            Oats with nuts and berries
+                            </p>
+                        <p className="small-margin">
+                            <button className="btnRecipe" onClick={this.recipe}> View Recipe</button>
+                        </p>
                     </div>
+                    <div className="col-sm-3">
+                        <img src="img/breakfast.jpg" className="w-100 image-border" alt="..." />
+                    </div>
+                </div>
+                <div className="row-md-1" style={{ paddingLeft: '16px' }}>
+                    {
+                        this.state.showMe ?
+                            <div className="row-md-3" style={{ position: "relative" }}>
+                                <h5>Recipe:</h5>
+                                <p className="recipe-text">Leave the oats soak in the milk in the fridge overnight or cook the oats in milk for 5-10 minutes.
+                <br />Put the berries and nuts on top and enjoy.</p>
+                            </div>
+                            : null
+                    }
+                </div>
+                <div className="modal-body recipe">
+                    <h5>Ingredients:</h5>
+                    <p>Oats, Berries(blueberries/strawberries), Almond milk, Nuts</p>
+                    <h5>Nutrients:</h5>
+                    <p>Protein: 10g, Carbohydrates: 12g, Fats: 5g</p>
+                </div>
+                <div className="modal-footer">
+                    <button className="btn btn-primary" onClick={() => { this.close(); this.props.changeModal(this.props.modalType) }}>Confirm</button>
+                    <button className="btnSuggestion" onClick={this.changeContent}>Give me another suggestion!</button>
+                    <button className="btn btn-secondary" onClick={() => { this.close(); this.props.changeModal(this.props.modalType) }}>Close</button>
                 </div>
             </Modal>
         )
     }*/
+
+
 }
 
 export default TiredModal;
