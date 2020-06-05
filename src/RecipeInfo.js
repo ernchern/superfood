@@ -76,7 +76,7 @@ class RecipeInfo extends React.Component {
                                         Protein: {this.props.meal.protein}g
                                     </li>
                                     <li>
-                                        Sodium: {this.props.meal.sodium}g
+                                        Sodium: {this.props.meal.sodium}mg
                                     </li>
                                     <li>
                                         Fats: {this.props.meal.fat}g
