@@ -21,8 +21,8 @@ class RecipeInfo extends React.Component {
                             </p>
                             <p className="small-margin">
                                 <div>
-                                    <i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Nuts</p>
-                                    <i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Milk</p>
+                                    <i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Nuts Free</p>
+                                    <i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Milk Free</p>
                                 </div> 
                                 <div style={{marginTop: "-20px"}}>
                                     <i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Diabetes</p>
