@@ -4,7 +4,8 @@ import Login from './Login.js';
 import Register from './Register.js';
 import Main from './Main.js';
 import SignIn from './SignIn.js';
-
+import firebase from 'firebase';
+import config from './config.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +17,15 @@ class App extends React.Component {
 
     this.setPage = this.setPage.bind(this);
     this.setSignInInfo = this.setSignInInfo.bind(this);
+  }
+
+  componentDidMount() {
+    firebase.initializeApp(config);
+    firebase.database().ref("/").on("value", function (snapshot) {
+      console.log(snapshot.val());
+    }, function (error) {
+      console.log(error);
+    });
   }
 
   setPage(page) {

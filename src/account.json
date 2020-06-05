@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "superfood-cs374",
+  "private_key_id": "0358a4780b07d239cecb955ef6dfb1812c49a272",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDT4NmVbEzv1u5y\nITkov7IyVR3ORyIpjYR2TRJAXZ37GXLTwwogNn9+7+VJoP8Peoi0zm6vXmHrDRpG\nsiNcMXAw/eJO6YrU02zm8Y4dOHll3u9zS+q200j7iBZJEF1iGv0Vj+CtL4ljiOFQ\n305zk0s/q/SiIz+RDX+vPtmNh7Z+5017bXLJYQdR0SlJjTuceNbxkWLXAng/qohv\n96fifMph5zd+8vutMp+Fof0iOqEl8Zh7j0isfWdW2mNNeLkz/VbyNaJUAqGE2RQC\nID+5GmHBK72WqZMGigmQz1VYvUel8Thw/VXCc1C0C5Xzf6Qbu982BrVPRhi2X/L9\nZfOmJs3BAgMBAAECggEACoDa2HJHeBucCMgGg4jJO9SGBzv11hXVYLXztywiO5iT\nMtXi3R5GgL5CDBMxQbet1OS845sBWKZ2zIANNQdLDAAHUCkkquXrlUvujcVHGK/j\nXUBWBjKAK4lKAtzkUYuL9fMtd025eQKH75CPsja1jsD7/hj9kDfD7NCSoVZTy4Od\ntxWtp2VdJpVowQK3ApvOBCAOOyh7qCY4NWrmzP0qwgyV5kdDpzqcJfuiPNMiNm83\n59m7yaV4ODY3wvUi49kKcZDzx4oDHOjE7octx1LIOuNsJIeK5Ygyer+1sEg/snF5\nJ4HU1UIpxzFmwAh7d6wAVjGCNQ1sST1mM4QibVPe6QKBgQD9y1XP8Q6mNucXX9nw\na9QrKI6MILbZECeI4cEx8WIOCivUOlx+flJjjHPYXrt5yITuKr6ZFN1ATELW+9f2\nPhfwxiRGFkXUMr8bvDCOTUMiCJo24j31tlb81Cpm5E/mUM9Gmpe8JfrOKbQ8tQXa\nBaFQKhlDDTmz/jZozYu+eAMOtQKBgQDVuEGabyAufrhFBPd9x18HzMmn+0CroAtX\noJBZ+jHos6lfmfcWRiqGEzoTwoI8r/vC1FSVAfFMWdCPauQAQMxvzaMfImXnFJ9V\ngbIMmlpTCgh39dV/eCsrSc7owXhLmHb8W8ajfkPsPtbLgW9wy+51L4epMC1owGHK\n8FrB2ZReXQKBgDSgs5y5KgaBoA4SzEi0s3x3noekSQZd+TTDS6KloWWz6j7KE2AP\npdoKyAL4Mfwg/p+8sWVhFDg/GCUoeDIR0jkVfXQjLjvAgiyoK5F2qBMooYH8DEkl\nlIg9HsXTVlY2L6U+bXSQk5+ouj1UdHAvdrH+6NokpfCTKIk3BmFq1Yd5AoGBAKP+\nxJBtr0MeR+XmXscsYpaIpUD6QnCv2aQ++CWjIAMRQemzKm/0HZNOU6Vv/yH0ZHrn\nFZRVrkRJMwmqGxS6pGUyZXZxncJJB87EO80B8EeCDmeGw3IR0wZfl57xPo67iqow\n/mbcb+Brg8UbKFlkkzFm7HF+H4oe/auM7geMHxadAoGAGhPub+YiuwAcygLcBDaV\nf7Th/XbJCYGin2UPWlN6mICfST/6tvokbjsDHFfL5WfxxCA/7/E4vp7JttmmExOv\no7AFVorWhoXvoWd0XvgLlNQg9xfIyLQ3eeHQH1ct3QOIxbMu29CrFkwAyCdeAhzt\ndkqx3ExZPjKkI3S6Rplny1s=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-n4omv@superfood-cs374.iam.gserviceaccount.com",
+  "client_id": "105607051459304054814",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-n4omv%40superfood-cs374.iam.gserviceaccount.com"
+}
