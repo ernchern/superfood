@@ -3,35 +3,39 @@ import './App.css';
 import { Button } from "react-bootstrap";
 
 class RecipeInfo extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
+        var imgSrc = (this.props.meal.country === "Korea") ? "img/Korea.png" : "img/Azerbaijan.png";
+        console.log(imgSrc);
+        let ingredients;
+        ingredients = String(this.props.meal.ingrediente).split("; ");
+        ingredients = ingredients.map(x => x.split(", "));
         return (
             <div className="recipe-margin recipe-pane">
                 <div className="container">
                     <div className="row recipe-margin headerRecipe">
                         <div className="col-lg-9" style={{position: "relative"}}>
                             <p className="text-vertical-center">
-                                Granola with nuts and berries
+                                {this.props.meal.name}
                             </p>
+                            {(this.props.meal.country === "Global")? 
+                            <p></p> :
                             <p className="small-margin font-16">
-                                <img src="img/az_flag.png" className="h-15" alt="..."/>
+                                <img src={imgSrc} className="h-15" alt="..."/>
                             </p>
+                            }  
                             <p className="small-margin">
-                                <div>
-                                    <i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Nuts Free</p>
-                                    <i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Milk Free</p>
+                                <div style={{marginBottom: "-20px"}}>
+                                    {(this.props.meal.nutsFree)? <p style={{display: "inline-block"}}><i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Nuts Free</p></p> : <p></p>}
+                                    {(this.props.meal.milkFree)? <p style={{display: "inline-block"}}><i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Milk Free</p></p> : <p></p>}
                                 </div> 
-                                <div style={{marginTop: "-20px"}}>
-                                    <i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Diabetes</p>
-                                    <i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Hypertension</p>
+                                <div style={{marginTop: "-30px", marginBottom: "-20px"}}>
+                                    {(this.props.meal.diabetes)? <p style={{display: "inline-block", marginTop: "-20px"}}><i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Diabetes</p></p> : <p></p>}
+                                    {(this.props.meal.hyper)? <p style={{display: "inline-block", marginTop: "-20px"}}><i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Hypertension</p></p> : <p></p>}    
                                 </div>
                             </p>
                         </div>
                         <div className="col-lg-3">
-                            <img src="img/breakfast.jpg" className="w-100 image-border" alt="..."/>
+                            <img src={this.props.meal.img} className="w-100 image-border" alt="..."/>
                         </div>
                         
                     </div>
@@ -40,18 +44,10 @@ class RecipeInfo extends React.Component {
                             <p className="title-recipe">You will need:</p>
                             <p>
                                 <ul className="recipe-list">
-                                    <li>
-                                        Oats: 30g
-                                    </li>
-                                    <li>
-                                        Berries (blueberries/strawberries): 100g
-                                    </li>
-                                    <li>
-                                        Almond milk: 100g
-                                    </li>
-                                    <li>
-                                        Nuts: 20g
-                                    </li>
+                                    {(ingredients.map((item, key) =>
+                                        <li id={key}>
+                                            {item[0] + ": " + item[1]}
+                                        </li>))}
                                 </ul>
                             </p>
                         </div>
@@ -60,7 +56,14 @@ class RecipeInfo extends React.Component {
                         <div className="col colRecipe">
                             <p className="title-recipe">Recipe:</p>
                             <p className="recipe-text"> 
-                                Leave the oats soak in the milk in the fridge overnight or cook the oats in milk for 5-10 minutes. Put the berries and nuts on top and enjoy.
+                                {this.props.meal.recipe.split("\n\n").map(function(item, key) {
+                                    return (
+                                        <span>
+                                            {item} 
+                                            <br/>
+                                        </span>
+                                    )
+                                })}
                             </p>
                         </div>
                     </div>
@@ -70,20 +73,20 @@ class RecipeInfo extends React.Component {
                             <p>
                                 <ul className="recipe-list">
                                     <li>
-                                        Protein: 10g
+                                        Protein: {this.props.meal.protein}g
                                     </li>
                                     <li>
-                                        Carbohydrates: 12g
+                                        Sodium: {this.props.meal.sodium}g
                                     </li>
                                     <li>
-                                        Fats: 5g
+                                        Fats: {this.props.meal.fat}g
                                     </li>
                                 </ul>
                             </p>
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col" class="bottom-recipe-row">
+                        <div className="col" className="bottom-recipe-row">
                             <button className="bottom-recipe-row"><p className="recipe-color-p" 
                             onClick={(event) => this.props.toggleRecipeMode(event, null)}>Close</p></button>
                         </div>
