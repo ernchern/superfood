@@ -687,6 +687,11 @@ a {
         border-color: #8ba072;
     }
 
+    .recipe-btn:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
 .cancel-btn {
     border: 1px solid transparent;
     border-radius: 5px;
