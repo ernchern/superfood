@@ -41,36 +41,45 @@ class PersonalRegister extends React.Component {
                             <form action="#" className="register-form">
                                 <Row>
                                     <Col lg="6">
-                                        <label>First Name</label>
-                                        <input autocomplete='off' type="text" id="name" onChange={(event) => this.props.setResponse("name", event.target.value)}/>
+                                        <label>First Name<span style={{color:'red'}}>*</span></label>
+                                        <input autoComplete='off' type="text" id="name" onChange={(event) => this.props.setResponse("name", event.target.value)}
+										value={this.props.responseData.name}/>
                                     </Col>
                                     <Col lg="6">
-                                        <label>Last Name</label>
-                                        <input autocomplete='off' type="text" id="email" onChange={(event) => this.props.setResponse("lastName", event.target.value)}/>
+                                        <label>Last Name<span style={{color:'red'}}>*</span></label>
+                                        <input autoComplete='off' type="text" id="lastname" onChange={(event) => this.props.setResponse("lastName", event.target.value)}
+										value={this.props.responseData.lastName}/>
                                     </Col>
                                     <Col lg="6">
-                                        <label>E-mail address</label>
-                                        <input autocomplete='off' type="text" id="email" onChange={(event) => this.props.setResponse("email", event.target.value)}/>
+                                        <label>E-mail Address<span style={{color:'red'}}>*</span></label>
+                                        <input autoComplete='off' type="text" id="email" onChange={(event) => this.props.setResponse("email", event.target.value)}
+										value={this.props.responseData.email}/>
                                     </Col>
                                     <Col lg="6">
-                                        <label>Password</label>
-                                        <input type="password" name="password" className="pw-input" autocomplete='off' type="text" id="password" onChange={(event) => this.props.setResponse("password", encrypt(event.target.value))}/>
+                                        <label>Password<span style={{color:'red'}}>*</span></label>
+                                        <input type="password" name="password" autoComplete='off' id="password" onChange={(event) => this.props.setResponse("password", encrypt(event.target.value))}/>
                                     </Col>
-                                    <Col lg="6">
-                                        <label>Country</label>
+                                    <Col lg="12" className="country-col">
+                                        <label>Country of Residence<span style={{color:'red'}}>*</span></label>
 										<Select maxMenuHeight="1000" placeholder={<div></div>} styles={ {valueContainer: base => ({height:'46px', paddingLeft:'10px'})}} 
-										options={countries} onChange={(value) => this.props.setResponse("country", value.label)} />
+										options={countries} onChange={(value) => this.props.setResponse("country", value.label)}
+										defaultValue={{ label:this.props.responseData.country, value:this.props.responseData.country}}/>
                                     </Col>
                                     <Col lg="6">
-                                        <label>Weight (optional)</label>
-                                        <input autocomplete='off' type="text" id="country" onChange={(event) => this.props.setResponse("weight", event.target.value)}/>
+                                        <label>Weight</label>
+                                        <input autoComplete='off' type="text" id="weight" onChange={(event) => this.props.setResponse("weight", event.target.value)}
+										value={this.props.responseData.weight}/>
                                     </Col>
                                     <Col lg="6">
-                                        <label>Height (optional)</label>
-                                        <input autocomplete='off' type="text" id="country" onChange={(event) => this.props.setResponse("height", event.target.value)}/>
+                                        <label>Height</label>
+                                        <input autoComplete='off' type="text" id="height" onChange={(event) => this.props.setResponse("height", event.target.value)}
+										value={this.props.responseData.height}/>
                                     </Col>
-                                </Row>
-                                <p className="btn register-btn" onClick={this.props.nextStage}>Next</p>
+									<Col lg="12">
+										<p className="btn register-btn1" onClick={this.props.goBack}>&#171; Back</p>
+										<p className="btn register-btn2" onClick={this.props.nextStage}>Next &#187;</p>
+									</Col>
+								</Row>
                             </form>
                         </div>
                     </Col>

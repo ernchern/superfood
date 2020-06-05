@@ -14,9 +14,9 @@ class Login extends React.Component {
             <Container>
 				<div className="main-section-text">
 					<Fade left duration={2500}>
-						<h1>SUPERFOOD</h1>
+						<h1><span style={{color:'#cfaddb',fontSize:'1em'}}>SUPER</span>FOOD</h1>
 					</Fade>
-					<Fade delay={2500}>
+					<Fade delay={2000}>
 						<h5>A personalized meal plan made just for you</h5>
 					</Fade>
 					<div className="buttons">

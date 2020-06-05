@@ -18,6 +18,7 @@ class Register extends React.Component {
       this.setResponse = this.setResponse.bind(this);
       this.nextStage = this.nextStage.bind(this);
       this.goToId = this.goToId.bind(this);
+	  this.goBack = this.goBack.bind(this);
     }
 
     setResponse(id, value) {
@@ -38,20 +39,25 @@ class Register extends React.Component {
                 alert("Error");
             }
 		} else if (page === "diseases") {
-			alert('submit')
+			alert('submit');
         } else {
             this.setState({currId: this.state.currId + 1});
         }
     }
 
     goToId(id) {
-        if (id <= this.state.currId) {
+		if (id <= this.state.currId) {
             this.setState({currId: id});
         } else {
-            alert("Error");
+            alert("Error2");
         }
         
     }
+	
+	goBack() {
+		this.setState({responses: {}});
+		this.props.setPage('login');
+	}
   
     render() {  
         var page = this.state.states[this.state.currId];
@@ -62,11 +68,12 @@ class Register extends React.Component {
 				<ReactEncrypt
 				encryptKey={"ewfWE@#%$rfdsefgdsf"}
 				>
-				<PersonalRegister setResponse={this.setResponse} nextStage={this.nextStage} goToId={this.goToId}/>
+					<PersonalRegister setResponse={this.setResponse} nextStage={this.nextStage} goToId={this.goToId} goBack={this.goBack} 
+					responseData={this.state.responses}/>
 				</ReactEncrypt>
                 break;
             case "allergy":
-                content = <AllergyRegister setResponse={this.setResponse} nextStage={this.nextStage} goToId={this.goToId}/>
+                content = <AllergyRegister setResponse={this.setResponse} nextStage={this.nextStage} goToId={this.goToId} goBack={this.goBack}/>
                 break;
             case "diseases":
                 content = <DiseaseRegister setResponse={this.setResponse} nextStage={this.nextStage} goToId={this.goToId}/>

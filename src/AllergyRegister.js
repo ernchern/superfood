@@ -74,7 +74,10 @@ class AllergyRegister extends React.Component {
 									<Col lg="7" className="d-flex justify-content-center">
 									{options}
 									</Col>
-									<p className="btn register-btn" onClick={this.props.nextStage}>Next</p>
+									<Col lg="12" style={{height:"80px"}}>
+										<p className="btn register-btn1" onClick={() => this.props.goToId(0)}>&#171; Back</p>
+										<p className="btn register-btn2" onClick={this.props.nextStage}>Next &#187;</p>
+									</Col>
 								</form>
 							</div>
 						</Col>

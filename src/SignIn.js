@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 
 class SignIn extends React.Component {
 	static contextTypes = {
-		decrypt: PropTypes.func.isRequired,
+		encrypt: PropTypes.func.isRequired,
 	}
 	
 	
     render() {
 		const {
-		  decrypt
+		  encrypt
 		} = this.context;
         return (
         <section className="register-section container-box">
@@ -30,7 +30,7 @@ class SignIn extends React.Component {
                                     </Col>
                                     <Col lg="12">
                                         <label>Password</label>
-                                        <input type="password" onChange={(event) => this.props.setResponse("pw", event.target.value)}/>
+                                        <input type="password" onChange={(event) => this.props.setResponse("pw", encrypt(event.target.value))}/>
                                     </Col>
                                 </Row>
                                 <p className="btn register-btn" onClick={() => this.props.setPage("main")}>Sign In</p>

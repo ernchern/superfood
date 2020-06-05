@@ -74,7 +74,10 @@ class DiseaseRegister extends React.Component {
 									<Col lg="7" className="d-flex justify-content-center">
 									{options}
 									</Col>
-									<p className="btn register-btn" onClick={this.props.nextStage}>Submit</p>
+									<Col lg="12" style={{height:"80px"}}>
+										<p className="btn register-btn1" onClick={() => this.props.goToId(1)}>&#171; Back</p>
+										<p className="btn register-btn3" onClick={this.props.nextStage}>Submit &#187;</p>
+									</Col>
 								</form>
 							</div>
 						</Col>
