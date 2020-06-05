@@ -148,8 +148,8 @@ img {
 }
 
 .main-section-text span {
-    font-size: 14px;
-    color: #f15d44;
+    font-size: 18px;
+    color: white;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
@@ -809,4 +809,72 @@ a {
 
 .single-meal {
     padding: 0px!important;
+}
+
+.login-button {
+	border: 1px solid transparent;
+	border-radius: 8px;
+    color: #8ba072;
+    background-color: #cfaddb;
+    border-color: #cfaddb;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 12px;
+    color: #ffffff;
+    text-align: center;
+    width: 230px;
+    height: 70px;
+    background-position: 0 0, 0 100%;
+    line-height: 45px;
+    position: relative;
+    z-index: 1;
+	margin-right:35px;
+}
+
+
+.login-button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.login-button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.login-button:hover span {
+	padding-right: 25px;
+}
+
+.login-button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.signin-button {
+	border: 1px solid #cfaddb;
+	border-radius: 8px;
+    color: #8ba072;
+    background-color: transparent;
+    border-color: #cfaddb;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 12px;
+    color: #ffffff;
+    text-align: center;
+    width: 200px;
+    height: 70px;
+    background-position: 0 0, 0 100%;
+    line-height: 45px;
+    position: relative;
+    z-index: 1;
+	margin-right:10px;
 }
