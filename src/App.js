@@ -6,6 +6,7 @@ import Main from './Main.js';
 import SignIn from './SignIn.js';
 import firebase from 'firebase';
 import config from './config.js';
+import ReactEncrypt from 'react-encrypt';
 
 class App extends React.Component {
   constructor(props) {
@@ -52,7 +53,11 @@ class App extends React.Component {
         content = <Register setPage={this.setPage}/>;
         break;
       case "signIn":
-        content = <SignIn setPage={this.setPage} setResponse={this.setSignInInfo}/>;
+        content = <ReactEncrypt
+				encryptKey={"ewfWE@#%$rfdsefgdsf"}
+				>
+				<SignIn setPage={this.setPage} setResponse={this.setSignInInfo}/>
+				</ReactEncrypt>;
         break;
       case "main":
         content = <Main recipes={this.state.recipes}/>;

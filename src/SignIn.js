@@ -1,9 +1,18 @@
 import React from 'react';
 import './App.css';
 import { Col, Row, Container } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 class SignIn extends React.Component {
+	static contextTypes = {
+		decrypt: PropTypes.func.isRequired,
+	}
+	
+	
     render() {
+		const {
+		  decrypt
+		} = this.context;
         return (
         <section className="register-section container-box">
             <Container>

@@ -3,13 +3,23 @@ import './App.css';
 import { Col, Row, Container } from 'react-bootstrap';
 import Select from "react-select";
 import { countries } from './countryList.js';
+import PropTypes from 'prop-types';
+
 
 class PersonalRegister extends React.Component {
     constructor(props) {
       super(props);
     }
 	
-    render() {	
+	static contextTypes = {
+		encrypt: PropTypes.func.isRequired,
+	}
+	
+    render() {
+	const {
+      encrypt
+    } = this.context;
+	
       return (
         <section className="register-section container-box">
             <Container>
@@ -39,12 +49,12 @@ class PersonalRegister extends React.Component {
                                         <input autocomplete='off' type="text" id="email" onChange={(event) => this.props.setResponse("lastName", event.target.value)}/>
                                     </Col>
                                     <Col lg="6">
-                                        <label>Your email address</label>
+                                        <label>E-mail address</label>
                                         <input autocomplete='off' type="text" id="email" onChange={(event) => this.props.setResponse("email", event.target.value)}/>
                                     </Col>
                                     <Col lg="6">
-                                        <label>Mobile No</label>
-                                        <input autocomplete='off' type="text" id="mobile" onChange={(event) => this.props.setResponse("mobile", event.target.value)}/>
+                                        <label>Password</label>
+                                        <input type="password" name="password" className="pw-input" autocomplete='off' type="text" id="password" onChange={(event) => this.props.setResponse("password", encrypt(event.target.value))}/>
                                     </Col>
                                     <Col lg="6">
                                         <label>Country</label>
