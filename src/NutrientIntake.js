@@ -7,20 +7,67 @@ class NutrientIntake extends React.Component {
         this.state = {
             showMode: "daily",
             nutrientContent: {
-                sodium: 30,
+                sodium: 50,
                 protein: 50,
-                fat: 74,
+                fat: 50,
             }
         };
 
         this.setShowMode = this.setShowMode.bind(this);
     }
 
-    setShowMode(id) {
-        this.setState({showMode: id});
+    componentDidMount() {
+        // console.log(this.props.currRecipe);
+        // var sumProtein = this.props.currRecipe.breakfast.protein + this.props.currRecipe.lunch.protein + this.props.currRecipe.dinner.protein;
+        // var sumFat = this.props.currRecipe.breakfast.fat + this.props.currRecipe.lunch.fat + this.props.currRecipe.dinner.fat;
+        // var sumSodium = this.props.currRecipe.breakfast.sodium + this.props.currRecipe.lunch.sodium + this.props.currRecipe.dinner.sodium;
+
+        // this.setState(
+        //     {nutrientContent: {
+        //         sodium: Math.min(sumSodium/1000, 100),
+        //         protein: Math.min(sumProtein/150, 100),
+        //         fat: Math.min(sumProtein/75, 100),
+        //     }}
+        // );
+       this.setShowMode("daily");
     }
 
-    render() {
+    setShowMode(id) {
+        var recipe = this.props.dailyRecipes[this.props.date];
+        this.setState({showMode: id});
+        if (id == "weekly") {
+            this.setState(
+                {nutrientContent: {
+                    sodium: Math.min(Math.round((this.state.nutrientContent.sodium + Math.random() * 5) * 10)/10, 100),
+                    protein: Math.min(Math.round((this.state.nutrientContent.protein + Math.random() * 5) * 10)/10, 100),
+                    fat: Math.min(Math.round((this.state.nutrientContent.fat + Math.random() * 5) * 10)/10, 100),
+                }}
+            );
+        } else if (id == "monthly") {
+            this.setState(
+                {nutrientContent: {
+                    sodium: Math.min(Math.round((this.state.nutrientContent.sodium + Math.random() * 10) * 10)/10, 100),
+                    protein: Math.min(Math.round((this.state.nutrientContent.protein + Math.random() * 10) * 10)/10, 100),
+                    fat: Math.min(Math.round((this.state.nutrientContent.fat + Math.random() * 10) * 10)/10, 100),
+                }}
+            );
+        } else {
+            var sumProtein = recipe.breakfast.protein + recipe.lunch.protein + recipe.dinner.protein;
+            var sumFat = recipe.breakfast.fat + recipe.lunch.fat + recipe.dinner.fat;
+            var sumSodium = recipe.breakfast.sodium + recipe.lunch.sodium + recipe.dinner.sodium;
+
+            this.setState(
+                {nutrientContent: {
+                    sodium: Math.min(Math.round(sumSodium/1400*100 * 10)/10, 100),
+                    protein: Math.min(Math.round(sumProtein/120*100 * 10)/10, 100),
+                    fat: Math.min(Math.round(sumProtein/75*100 * 10)/10, 100),
+                }}
+            );
+        }
+
+    }
+
+    render() { 
         return (
             <div className="nutrient-intake">
                 <h6>Nutrient Intake</h6>

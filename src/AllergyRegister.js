@@ -11,19 +11,20 @@ class AllergyRegister extends React.Component {
 		allergy: false
 	  }
 	  
-	  this.props.setResponse("nopeanut",false);
-	  this.props.setResponse("nomilk",false);
-	  
 	  this.showAllergy = this.showAllergy.bind(this);
 	  this.hideAllergy = this.hideAllergy.bind(this);
     }
 	
 	showAllergy() {
 		this.setState({allergy:true});
+		this.props.setResponse("nopeanut",false);
+		this.props.setResponse("nomilk",false);
 	}
 	
 	hideAllergy() {
 		this.setState({allergy:false});
+		this.props.setResponse("nopeanut",false);
+		this.props.setResponse("nomilk",false);
 	}
   
     render() { 

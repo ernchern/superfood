@@ -35,6 +35,7 @@ class MealInfo extends React.Component{
         var newDate = new Date(this.state.date.getFullYear(), this.state.date.getMonth(), this.state.date.getDate() + change);
         this.props.generateDailyMeals(newDate);
         this.setState({date: newDate});
+        this.props.setCurrentDate(newDate);
 
     }
 

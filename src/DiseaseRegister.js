@@ -11,19 +11,20 @@ class DiseaseRegister extends React.Component {
 		disease: false
 	  }
 	  
-	  this.props.setResponse("diabetes",false);
-	  this.props.setResponse("hypertension",false);
-	  
 	  this.showOptions = this.showOptions.bind(this);
 	  this.hideOptions = this.hideOptions.bind(this);
     }
 	
 	showOptions() {
 		this.setState({disease:true});
+		this.props.setResponse("diabetes",false);
+		this.props.setResponse("hypertension",false);
 	}
 	
 	hideOptions() {
 		this.setState({disease:false});
+		this.props.setResponse("diabetes",false);
+		this.props.setResponse("hypertension",false);
 	}
   
     render() { 
