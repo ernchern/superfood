@@ -24,9 +24,9 @@ class NutrientIntake extends React.Component {
         return (
             <div className="nutrient-intake">
                 <h6>Nutrient Intake</h6>
-                <nav>
+                <nav className="nutrient-nav">
                     <div className="row nav nav-tabs nav-fill">
-                        <a className={(this.state.showMode === "daily")? "nav-item nav-link active" : "nav-item nav-link"} onClick={() => this.setShowMode("daily")}>Daily</a>
+                        <a className={(this.state.showMode === "daily")? "nav-item nav-link active " : "nav-item nav-link"} onClick={() => this.setShowMode("daily")}>Daily</a>
                         <a className={(this.state.showMode === "weekly")? "nav-item nav-link active" : "nav-item nav-link"} onClick={() => this.setShowMode("weekly")}>Weekly</a>
                         <a className={(this.state.showMode === "monthly")? "nav-item nav-link active" : "nav-item nav-link"} onClick={() => this.setShowMode("monthly")}>Monthly</a>
                     </div>
@@ -34,7 +34,7 @@ class NutrientIntake extends React.Component {
                 <div className="tab-content py-3 px-3 px-sm-0 nutrients-progress" id="nav-tabContent">
                     <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                         <div className="row">
-                            <div className="col-sm-3">
+                            <div className="col-sm-3 nutrient-row">
                                 <p>Sodium</p>
                             </div>
                             <div className="col-sm-9">
@@ -42,7 +42,7 @@ class NutrientIntake extends React.Component {
                                     <div className="nutrients-progress-bar" style={{width: this.state.nutrientContent.sodium + "%"}}>{this.state.nutrientContent.sodium + "%"}</div>
                                 </div>
                             </div>
-                            <div className="col-sm-3">
+                            <div className="col-sm-3 nutrient-row">
                                 <p>Protein</p>
                             </div>
                             <div className="col-sm-9">
@@ -50,7 +50,7 @@ class NutrientIntake extends React.Component {
                                     <div className="nutrients-progress-bar" style={{width: this.state.nutrientContent.protein + "%"}}>{this.state.nutrientContent.protein + "%"}</div>
                                 </div>
                             </div>
-                            <div className="col-sm-3">
+                            <div className="col-sm-3 nutrient-row">
                                 <p>Fat</p>
                             </div>
                             <div className="col-sm-9">

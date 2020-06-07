@@ -20,7 +20,7 @@ class ProfileInfo extends React.Component{
                         <button className="profile-button">Edit Profile</button>
                         </div>
                         <div className="col-sm-6 left-column logout-column">
-                        <button className="logout-button">Log out</button>
+                        <button className="logout-button" onClick={() => this.props.setPage("signIn")}>Log out</button>
                     </div>
                     </div>
                 </div>

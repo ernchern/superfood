@@ -88,7 +88,7 @@ img {
     background-color: #8ba072;
     border-color: #8ba072;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     padding: 0 12px;
     color: #ffffff;
@@ -115,6 +115,7 @@ img {
     color: black;
     background-color: #dcedc8;
     border-color: #8ba072;
+
 }
 
 #preloder {
@@ -284,7 +285,7 @@ img {
 }
 
 .recipe-pane {
-    max-width: 50%;
+   /* max-width: 50%;*/
     min-height: 800px;
 }
 
@@ -543,14 +544,27 @@ img {
     background-color: transparent;
 }
 
+.left-column button {
+    background-color: #f3f3f3;
+    padding: 0px;
+}
 .nutrient-intake {
-	height: 50%;
-    position: absolute;
-	margin-top: 20%;
+    height: 50%;
+    position: relative;
+    margin-top: 40%;
+    font-size: 0.75rem;
 }
 
 .nutrient-intake h6 {
     margin-bottom: 20px;
+}
+
+.nutrient-row p{
+    font-size: 0.75rem;
+}
+
+.nutrient-nav {
+    font-size: 0.75rem;
 }
 
 .breakfast {
@@ -846,9 +860,6 @@ a {
     height: 65%;
 }
 
-.profile-info {
-    border-top-left-radius: 10%;
-}
 
 .main-page-white {
     border-radius: 5%;
