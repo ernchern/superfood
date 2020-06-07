@@ -285,7 +285,7 @@ img {
 }
 
 .recipe-pane {
-   /* max-width: 50%;*/
+    max-width: 50%;
     min-height: 800px;
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Button } from "react-bootstrap";
 
+
 class RecipeInfo extends React.Component {
     render() {
         var imgSrc = (this.props.meal.country === "Korea") ? "img/Korea.png" : "img/Azerbaijan.png";
