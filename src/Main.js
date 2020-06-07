@@ -10,17 +10,17 @@ class Main extends React.Component{
         super(props);
         this.state = {
             showRecipe: false,
-            name: "Aruj Singh",
-            height: "191 cm",
-            weight: "80 kg",
             date: new Date(),
-            dailyRecipes: {}
+            dailyRecipes: {},
+            currDate: this.formatDate(new Date())
         }
 
         this.toggleRecipeMode = this.toggleRecipeMode.bind(this);
         this.generateDailyMeals = this.generateDailyMeals.bind(this);
 
         this.generateDailyMeals(new Date());
+
+        this.setCurrentDate = this.setCurrentDate.bind(this);
     }
 
     formatDate(date) {
@@ -44,8 +44,19 @@ class Main extends React.Component{
             tmp["breakfast"] = this.getRandom(this.props.recipes);
             tmp["lunch"] = this.getRandom(this.props.recipes);
             tmp["dinner"] = this.getRandom(this.props.recipes);
+            //this.setState({dailyRecipes: tmp});
         }
         
+    }
+
+    setCurrentDate(date) {
+        var formattedDate = this.formatDate(date);
+        this.setState({currDate: formattedDate});
+    }
+
+    logout = () => {
+        this.props.setLoggedUserNull();
+        this.props.setPage("login");
     }
 
     toggleRecipeMode(event, mealType) {
@@ -62,10 +73,13 @@ class Main extends React.Component{
                     <Row>
                         <div className="register-text container-fluid main-page-white">
                             <div className="row" style={{paddingLeft: "3%"}}>
-                                <ProfileInfo name={this.state.name} height={this.state.height} weight={this.state.weight}/>
+                                <ProfileInfo 
+                                date={this.formatDate(new Date())} dailyRecipes={this.state.dailyRecipes}
+                                user={this.props.user} logout={this.logout} setPage={this.props.setPage}/>
                                 {(!this.state.showRecipe)? 
                                 <MealInfo currentDate={this.state.date} toggleRecipeMode={this.toggleRecipeMode}
-                                    generateDailyMeals={this.generateDailyMeals} meals={this.state.dailyRecipes}/> : 
+                                    generateDailyMeals={this.generateDailyMeals} meals={this.state.dailyRecipes}
+                                    setCurrentDate={this.setCurrentDate}/> : 
                                 <RecipeInfo toggleRecipeMode={this.toggleRecipeMode} meal={this.state.selectedRecipe}/>}
                             </div>
                         </div>

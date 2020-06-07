@@ -13,10 +13,10 @@ class Login extends React.Component {
         <section className="main-section background-box">
             <Container>
 				<div className="main-section-text">
-					<Fade left duration={2500}>
+					<Fade left duration={1250}>
 						<h1><span style={{color:'#cfaddb',fontSize:'1em'}}>SUPER</span>FOOD</h1>
 					</Fade>
-					<Fade delay={2000}>
+					<Fade delay={1000}>
 						<h5>A personalized meal plan made just for you</h5>
 					</Fade>
 					<div className="buttons">

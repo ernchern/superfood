@@ -52,12 +52,13 @@ class PersonalRegister extends React.Component {
                                     </Col>
                                     <Col lg="6">
                                         <label>E-mail Address<span style={{color:'red'}}>*</span></label>
-                                        <input autoComplete='off' type="text" id="email" onChange={(event) => this.props.setResponse("email", event.target.value)}
+                                        <input disabled={this.props.loggedUser != null} autoComplete='off' type="text" id="email" onChange={(event) => this.props.setResponse("email", event.target.value)}
 										value={this.props.responseData.email}/>
                                     </Col>
                                     <Col lg="6">
                                         <label>Password<span style={{color:'red'}}>*</span></label>
-                                        <input type="password" name="password" autoComplete='off' id="password" onChange={(event) => this.props.setResponse("password", encrypt(event.target.value))}/>
+                                        <input disabled={this.props.loggedUser != null} type="password" name="password" autoComplete='off' id="password" onChange={(event) => this.props.setResponse("pw", event.target.value)}
+                                        value={this.props.responseData.pw}/>
                                     </Col>
                                     <Col lg="12" className="country-col">
                                         <label>Country of Residence<span style={{color:'red'}}>*</span></label>
@@ -66,12 +67,12 @@ class PersonalRegister extends React.Component {
 										defaultValue={{ label:this.props.responseData.country, value:this.props.responseData.country}}/>
                                     </Col>
                                     <Col lg="6">
-                                        <label>Weight</label>
+                                        <label>Weight (m)</label>
                                         <input autoComplete='off' type="text" id="weight" onChange={(event) => this.props.setResponse("weight", event.target.value)}
 										value={this.props.responseData.weight}/>
                                     </Col>
                                     <Col lg="6">
-                                        <label>Height</label>
+                                        <label>Height (kg)</label>
                                         <input autoComplete='off' type="text" id="height" onChange={(event) => this.props.setResponse("height", event.target.value)}
 										value={this.props.responseData.height}/>
                                     </Col>

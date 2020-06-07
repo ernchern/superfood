@@ -18,17 +18,40 @@ class App extends React.Component {
 
     this.setPage = this.setPage.bind(this);
     this.setSignInInfo = this.setSignInInfo.bind(this);
+    this.login = this.login.bind(this);
+    this.setLoggedUserNull = this.setLoggedUserNull.bind(this);
   }
 
   componentDidMount() {
     firebase.initializeApp(config);
     var recipes;
     firebase.database().ref("/").on("value", (snapshot) => {
-      this.setState({recipes: snapshot.val().recipes});
+      this.setState({recipes: snapshot.val().recipes, users: snapshot.val().users});
     }, function (error) {
       console.log(error);
     });
    
+  }
+
+  setLoggedUserNull() {
+    this.setState({loggedUser: null});
+  }
+
+  login() {
+    let user, key, logged;
+    for (key in this.state.users) {
+      user = this.state.users[key];
+      if (user.pw === this.state.signInPw && user.email === this.state.signInEmail) {
+        this.setState({loggedUser: user});
+        logged = true;
+        this.setPage("main");
+      }
+    }
+
+    if (!logged) {
+      alert("This user is not registered.");
+    }
+
   }
 
   setPage(page) {
@@ -50,17 +73,18 @@ class App extends React.Component {
         content = <Login setPage={this.setPage}/>;
         break;
       case "register":
-        content = <Register setPage={this.setPage}/>;
+        content = <Register loggedUser={this.state.loggedUser} setPage={this.setPage} logged/>;
         break;
       case "signIn":
         content = <ReactEncrypt
 				encryptKey={"ewfWE@#%$rfdsefgdsf"}
 				>
-				<SignIn setPage={this.setPage} setResponse={this.setSignInInfo}/>
+				<SignIn user={this.state.currUser} login={this.login} setPage={this.setPage} setResponse={this.setSignInInfo}/>
 				</ReactEncrypt>;
         break;
       case "main":
-        content = <Main recipes={this.state.recipes}/>;
+        content = <Main user={this.state.loggedUser} recipes={this.state.recipes} 
+          setPage={this.setPage} setLoggedUserNull={this.setLoggedUserNull}/>;
         break;
       default:
         content = <h1>Error</h1>;
