@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/superfood/precache-manifest.a54b58b6e8b8e0b12779180bf2071ccf.js"
+  "/superfood/precache-manifest.090cc575247e785e1dec8f4b755d6bfc.js"
 );
 
 self.addEventListener('message', (event) => {
