@@ -26,6 +26,7 @@ class Register extends React.Component {
         var tmp = this.state.responses;
         tmp[id] = value;
         this.setState({responses: tmp});
+		console.log(this.state.responses);
     }
 
     nextStage() {
