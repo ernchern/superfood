@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/superfood/static/css/main.680d1c37.chunk.css",
-    "main.js": "/superfood/static/js/main.2cfd8be4.chunk.js",
-    "main.js.map": "/superfood/static/js/main.2cfd8be4.chunk.js.map",
+    "main.js": "/superfood/static/js/main.dac29cd5.chunk.js",
+    "main.js.map": "/superfood/static/js/main.dac29cd5.chunk.js.map",
     "runtime-main.js": "/superfood/static/js/runtime-main.98c8c6bd.js",
     "runtime-main.js.map": "/superfood/static/js/runtime-main.98c8c6bd.js.map",
     "static/css/2.af3c1da9.chunk.css": "/superfood/static/css/2.af3c1da9.chunk.css",
     "static/js/2.2151646c.chunk.js": "/superfood/static/js/2.2151646c.chunk.js",
     "static/js/2.2151646c.chunk.js.map": "/superfood/static/js/2.2151646c.chunk.js.map",
     "index.html": "/superfood/index.html",
-    "precache-manifest.090cc575247e785e1dec8f4b755d6bfc.js": "/superfood/precache-manifest.090cc575247e785e1dec8f4b755d6bfc.js",
+    "precache-manifest.3fef16ba2f0e69156bc5779c304a8a6e.js": "/superfood/precache-manifest.3fef16ba2f0e69156bc5779c304a8a6e.js",
     "service-worker.js": "/superfood/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/superfood/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.680d1c37.chunk.css.map": "/superfood/static/css/main.680d1c37.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.2151646c.chunk.js",
     "static/css/main.680d1c37.chunk.css",
-    "static/js/main.2cfd8be4.chunk.js"
+    "static/js/main.dac29cd5.chunk.js"
   ]
 }
