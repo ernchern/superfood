@@ -39,31 +39,32 @@ class NutrientIntake extends React.Component {
     setShowMode(id) {
         var recipe = this.props.dailyRecipes[this.props.date];
         this.setState({showMode: id});
+
+        var sumProtein = recipe.breakfast.protein + recipe.lunch.protein + recipe.dinner.protein;
+        var sumFat = recipe.breakfast.fat + recipe.lunch.fat + recipe.dinner.fat;
+        var sumSodium = recipe.breakfast.sodium + recipe.lunch.sodium + recipe.dinner.sodium;
+
         if (id == "weekly") {
             this.setState(
                 {nutrientContent: {
-                    sodium: Math.min(Math.round((this.state.nutrientContent.sodium + Math.random() * 5) * 10)/10, 100),
-                    protein: Math.min(Math.round((this.state.nutrientContent.protein + Math.random() * 5) * 10)/10, 100),
-                    fat: Math.min(Math.round((this.state.nutrientContent.fat + Math.random() * 5) * 10)/10, 100),
+                    sodium: Math.min(Math.round(sumSodium/1250*100 * 10)/10, 100),
+                    protein: Math.min(Math.round(sumProtein/70*100 * 10)/10, 100),
+                    fat: Math.min(Math.round(sumProtein/70*100 * 10)/10, 100),
                 }}
             );
         } else if (id == "monthly") {
             this.setState(
                 {nutrientContent: {
-                    sodium: Math.min(Math.round((this.state.nutrientContent.sodium + Math.random() * 10) * 10)/10, 100),
-                    protein: Math.min(Math.round((this.state.nutrientContent.protein + Math.random() * 10) * 10)/10, 100),
-                    fat: Math.min(Math.round((this.state.nutrientContent.fat + Math.random() * 10) * 10)/10, 100),
+                    sodium: Math.min(Math.round(sumSodium/1350*100 * 10)/10, 100),
+                    protein: Math.min(Math.round(sumProtein/90*100 * 10)/10, 100),
+                    fat: Math.min(Math.round(sumProtein/65*100 * 10)/10, 100),
                 }}
             );
         } else {
-            var sumProtein = recipe.breakfast.protein + recipe.lunch.protein + recipe.dinner.protein;
-            var sumFat = recipe.breakfast.fat + recipe.lunch.fat + recipe.dinner.fat;
-            var sumSodium = recipe.breakfast.sodium + recipe.lunch.sodium + recipe.dinner.sodium;
-
             this.setState(
                 {nutrientContent: {
                     sodium: Math.min(Math.round(sumSodium/1400*100 * 10)/10, 100),
-                    protein: Math.min(Math.round(sumProtein/120*100 * 10)/10, 100),
+                    protein: Math.min(Math.round(sumProtein/85*100 * 10)/10, 100),
                     fat: Math.min(Math.round(sumProtein/75*100 * 10)/10, 100),
                 }}
             );
