@@ -11,6 +11,11 @@ Secondary:
 #fffffb
 #aabb97
 
+### 3 "New" Tasks
+1. Recommending menus that doesn't collid with user's restrictions (based on answers to the survey)
+2. Show detailed information upon request (e.g. recipe and nutrient information)
+3. Ability to change the menu for different suggestion (i.e. lucky draw)
+
 
 ### Restrictions
 Chronic diseases:
