@@ -21,6 +21,7 @@ class Main extends React.Component{
         this.generateDailyMeals(new Date());
 
         this.setCurrentDate = this.setCurrentDate.bind(this);
+        this.setMealTired = this.setMealTired.bind(this);
     }
 
     formatDate(date) {
@@ -29,6 +30,15 @@ class Main extends React.Component{
         const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
         return da + " " + mo;
 
+    }
+
+    setMealTired(date, type, meal) {
+        //var formattedDate = this.formatDate(date);
+        var tmp = this.state.dailyRecipes[date];
+        tmp[type] = meal;
+        if (date == this.formatDate(new Date())) {
+            this.setState({dailyRecipes: this.state.dailyRecipes});
+        }
     }
 
     getRandom(items) {
@@ -79,7 +89,8 @@ class Main extends React.Component{
                                 {(!this.state.showRecipe)? 
                                 <MealInfo currentDate={this.state.date} toggleRecipeMode={this.toggleRecipeMode}
                                     generateDailyMeals={this.generateDailyMeals} meals={this.state.dailyRecipes}
-                                    setCurrentDate={this.setCurrentDate}/> : 
+                                    setCurrentDate={this.setCurrentDate} allMeals={this.props.recipes}
+                                    setMealTired={this.setMealTired}/> : 
                                 <RecipeInfo toggleRecipeMode={this.toggleRecipeMode} meal={this.state.selectedRecipe}/>}
                             </div>
                         </div>

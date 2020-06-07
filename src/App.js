@@ -44,6 +44,13 @@ class App extends React.Component {
       if (user.pw === this.state.signInPw && user.email === this.state.signInEmail) {
         this.setState({loggedUser: user});
         logged = true;
+        var filteredRecipes = this.state.recipes.filter(
+          meal => !(user.nomilk && !meal.milkFree) &&
+                  !(user.nopeanuts && !meal.nutsFree) &&
+                  !(user.hyper && !meal.hyper) &&
+                  !(user.diabetes && !meal.diabetes)
+        )
+        this.setState({recipes: filteredRecipes})
         this.setPage("main");
       }
     }

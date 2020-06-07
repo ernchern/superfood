@@ -10,17 +10,43 @@ class MealInfo extends React.Component{
             modalBreakfast: false,
             modalLunch: false,
             modalDinner: false,
-            date: this.props.currentDate
+            date: this.props.currentDate,
         }
 
         this.changeModal = this.changeModal.bind(this);
         this.formatDate = this.formatDate.bind(this);
+        this.randomizeSuggestion = this.randomizeSuggestion.bind(this);
     }
 
     changeModal(id) {
         var tmp = this.state[id];
         this.setState({[id]: !tmp});
-        
+        this.randomizeSuggestion();
+    }
+
+    getRandom(items) {
+        return items[Math.floor(Math.random() * items.length)];
+    }
+
+    randomizeSuggestion() {
+        let randomBreakfast, randomLunch, randomDinner;
+        var dailyMeal = this.props.meals[this.formatDate()];
+        do {
+            randomBreakfast = this.getRandom(this.props.allMeals);
+        } while(randomBreakfast.name == dailyMeal.breakfast.name);
+        do {
+            randomLunch = this.getRandom(this.props.allMeals);
+        } while(randomLunch.name == dailyMeal.lunch.name);
+        do {
+            randomDinner = this.getRandom(this.props.allMeals);
+        } while(randomDinner.name == dailyMeal.dinner.name);
+        this.setState({
+            randomBreakfast: randomBreakfast,
+            randomLunch: randomLunch,
+            randomDinner: randomDinner
+        })
+
+
     }
 
     formatDate() {
@@ -74,18 +100,28 @@ class MealInfo extends React.Component{
                                     <Meal type={"Breakfast"} changeModal={this.changeModal} modalType={"modalBreakfast"}
                                         meal={dailyMeal["breakfast"]}/>
                                 </div>
-                                <TiredModal show={this.state.modalBreakfast} changeModal={this.changeModal} modalType={"modalBreakfast"}/>
+                                <TiredModal show={this.state.modalBreakfast} 
+                                changeModal={this.changeModal} modalType={"modalBreakfast"}
+                                meal={this.state.randomBreakfast} randomizeSuggestion={this.randomizeSuggestion}
+                                setMealTired={this.props.setMealTired} date={this.formatDate()}/>
+
                                 <div onClick={(event) => this.props.toggleRecipeMode(event, dailyMeal.lunch)}>
                                     <Meal type={"Lunch"} changeModal={this.changeModal} modalType={"modalLunch"}
                                         meal={dailyMeal.lunch}/>
                                 </div>
-                                <TiredModal show={this.state.modalLunch} changeModal={this.changeModal} modalType={"modalLunch"}/>
+                                <TiredModal show={this.state.modalLunch} 
+                                changeModal={this.changeModal} modalType={"modalLunch"}
+                                meal={this.state.randomLunch} randomizeSuggestion={this.randomizeSuggestion}
+                                setMealTired={this.props.setMealTired} date={this.formatDate()}/>
 
                                 <div onClick={(event) => this.props.toggleRecipeMode(event, dailyMeal.dinner)}>
                                     <Meal type={"Dinner"} changeModal={this.changeModal} modalType={"modalDinner"}
                                     meal={dailyMeal.dinner}/>
                                 </div>
-                                <TiredModal show={this.state.modalDinner} changeModal={this.changeModal} modalType={"modalDinner"}/>
+                                <TiredModal show={this.state.modalDinner}
+                                 changeModal={this.changeModal} modalType={"modalDinner"}
+                                 meal={this.state.randomDinner} randomizeSuggestion={this.randomizeSuggestion}
+                                 setMealTired={this.props.setMealTired} date={this.formatDate()}/>
                             </div>
                         </div>
                     </div>

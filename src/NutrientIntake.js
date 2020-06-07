@@ -32,6 +32,10 @@ class NutrientIntake extends React.Component {
        this.setShowMode("daily");
     }
 
+    componentWillReceiveProps() {
+        this.setShowMode("daily");
+    }
+
     setShowMode(id) {
         var recipe = this.props.dailyRecipes[this.props.date];
         this.setState({showMode: id});
@@ -70,12 +74,12 @@ class NutrientIntake extends React.Component {
     render() { 
         return (
             <div className="nutrient-intake">
-                <h6>Nutrient Intake</h6>
+                <h6>Nutrients Taken</h6>
                 <nav className="nutrient-nav">
                     <div className="row nav nav-tabs nav-fill">
-                        <a className={(this.state.showMode === "daily")? "nav-item nav-link active " : "nav-item nav-link"} onClick={() => this.setShowMode("daily")}>Daily</a>
-                        <a className={(this.state.showMode === "weekly")? "nav-item nav-link active" : "nav-item nav-link"} onClick={() => this.setShowMode("weekly")}>Weekly</a>
-                        <a className={(this.state.showMode === "monthly")? "nav-item nav-link active" : "nav-item nav-link"} onClick={() => this.setShowMode("monthly")}>Monthly</a>
+                        <a className={(this.state.showMode === "daily")? "nav-item nav-link active " : "nav-item nav-link"} onClick={() => this.setShowMode("daily")}>Today</a>
+                        <a className={(this.state.showMode === "weekly")? "nav-item nav-link active" : "nav-item nav-link"} onClick={() => this.setShowMode("weekly")}>This Week</a>
+                        <a className={(this.state.showMode === "monthly")? "nav-item nav-link active" : "nav-item nav-link"} onClick={() => this.setShowMode("monthly")}>This Month</a>
                     </div>
                 </nav>
                 <div className="tab-content py-3 px-3 px-sm-0 nutrients-progress" id="nav-tabContent">
