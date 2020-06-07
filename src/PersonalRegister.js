@@ -52,13 +52,12 @@ class PersonalRegister extends React.Component {
                                     </Col>
                                     <Col lg="6">
                                         <label>E-mail Address<span style={{color:'red'}}>*</span></label>
-                                        <input disabled={this.props.loggedUser != null} autoComplete='off' type="text" id="email" onChange={(event) => this.props.setResponse("email", event.target.value)}
+                                        <input autoComplete='off' type="text" id="email" onChange={(event) => this.props.setResponse("email", event.target.value)}
 										value={this.props.responseData.email}/>
                                     </Col>
                                     <Col lg="6">
                                         <label>Password<span style={{color:'red'}}>*</span></label>
-                                        <input disabled={this.props.loggedUser != null} type="password" name="password" autoComplete='off' id="password" onChange={(event) => this.props.setResponse("pw", event.target.value)}
-                                        value={this.props.responseData.pw}/>
+                                        <input type="password" name="password" autoComplete='off' id="password" onChange={(event) => this.props.setResponse("pw", encrypt(event.target.value).toString())}/>
                                     </Col>
                                     <Col lg="12" className="country-col">
                                         <label>Country of Residence<span style={{color:'red'}}>*</span></label>

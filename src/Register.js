@@ -26,6 +26,7 @@ class Register extends React.Component {
         var tmp = this.state.responses;
         tmp[id] = value;
         this.setState({responses: tmp});
+		console.log(this.state.responses);
     }
 
     nextStage() {
@@ -40,7 +41,7 @@ class Register extends React.Component {
 		} else if (page === "diseases") {
             if ("hypertension" in responses && "diabetes" in responses) {
                 console.log(responses);
-                firebase.database().ref("/users/" + responses.email).set(responses).catch(error => console.log(error)).then(() => this.props.setPage('login'));
+                firebase.database().ref("/users/").push(responses).catch(error => console.log(error)).then(() => this.props.setPage('login'));
             } else {
                 alert("Please indicate if you have any health restriction.");
             }
