@@ -5,11 +5,12 @@ import { Button } from "react-bootstrap";
 
 class RecipeInfo extends React.Component {
     render() {
-        var imgSrc = (this.props.meal.country === "Korea") ? "img/Korea.png" : "img/Azerbaijan.png";
+        var imgSrc = (this.props.meal.country === "South Korea") ? "img/Korea.png" : "img/Azerbaijan.png";
         console.log(imgSrc);
         let ingredients;
         ingredients = String(this.props.meal.ingrediente).split("; ");
         ingredients = ingredients.map(x => x.split(", "));
+        console.log(this.props.meal);
         return (
             <div className="recipe-margin recipe-pane">
                 <div className="container">
@@ -30,7 +31,7 @@ class RecipeInfo extends React.Component {
                                     {(this.props.meal.milkFree)? <p style={{display: "inline-block"}}><i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Milk Free</p></p> : <p></p>}
                                 </div> 
                                 <div style={{marginTop: "-30px", marginBottom: "-20px"}}>
-                                    {(this.props.meal.diabetes)? <p style={{display: "inline-block", marginTop: "-20px"}}><i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Diabetes</p></p> : <p></p>}
+                                    {(this.props.meal.diabetes  )? <p style={{display: "inline-block", marginTop: "-20px"}}><i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Diabetes</p></p> : <p></p>}
                                     {(this.props.meal.hyper)? <p style={{display: "inline-block", marginTop: "-20px"}}><i class="fa fa-check-circle-o check-icon"/> <p className="icon-text">Hypertension</p></p> : <p></p>}    
                                 </div>
                             </p>
