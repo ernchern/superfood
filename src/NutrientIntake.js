@@ -110,7 +110,7 @@ class NutrientIntake extends React.Component {
                                     <div className="nutrients-progress-bar" style={{width: this.state.nutrientContent.fat + "%"}}>{this.state.nutrientContent.fat + "%"}</div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="nutrients-info-box">
                                 <p style={{float: "right", textAlign: "right", textSize: "0.75rem"}}>
                                     % Daily Values based on your daily nutrient needs
                                 </p>
