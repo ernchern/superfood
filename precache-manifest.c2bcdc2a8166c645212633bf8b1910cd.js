@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "14d7f1e16c83464b7a24db87f27fdf58",
+    "revision": "48bec7092a0baa3ba0ba3787b8f94b5c",
     "url": "/superfood/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/superfood/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "b10a185f3163f7f6a637",
+    "revision": "969e272e68daa72bf8a5",
     "url": "/superfood/static/css/main.8ae1e487.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/superfood/static/js/2.2151646c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b10a185f3163f7f6a637",
-    "url": "/superfood/static/js/main.3299182d.chunk.js"
+    "revision": "969e272e68daa72bf8a5",
+    "url": "/superfood/static/js/main.c06869c2.chunk.js"
   },
   {
     "revision": "f4b3ba99915064f715da",
