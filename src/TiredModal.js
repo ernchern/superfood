@@ -25,6 +25,7 @@ class TiredModal extends React.Component {
         this.setState({
             showMe: false
         })
+        this.setState({buttonText: "View Recipe"})
     }
 
     render() {
@@ -79,7 +80,7 @@ class TiredModal extends React.Component {
                     <button className="confirm-btn" onClick={() => { this.close(); 
                         this.props.setMealTired(this.props.date, mealType, this.props.meal); 
                         this.props.changeModal(this.props.modalType) }}>Confirm</button>
-                            <button className="suggestion-btn" onClick={this.props.randomizeSuggestion}>Give me another suggestion!</button>
+                    <button className="suggestion-btn" onClick={() => { this.close(); this.props.randomizeSuggestion() }}>Give me another suggestion!</button>
                     <button className="cancel-btn" onClick={() => { this.close(); this.props.changeModal(this.props.modalType) }}>Cancel</button>
                 </view>
             </Modal>
