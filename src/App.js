@@ -48,8 +48,11 @@ class App extends React.Component {
           meal => !(user.nomilk && !meal.milkFree) &&
                   !(user.nopeanuts && !meal.nutsFree) &&
                   !(user.hyper && !meal.hyper) &&
-                  !(user.diabetes && !meal.diabetes)
+                  !(user.diabetes && !meal.diabetes) &&
+                  (user.country === meal.country || meal.country === "Global")
         )
+        console.log(user.country);
+        console.log(filteredRecipes);
         this.setState({recipes: filteredRecipes})
         this.setPage("main");
       }
