@@ -6,7 +6,8 @@ class TiredModal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            showMe: false
+            showMe: false,
+            buttonText: "View Recipe",
         }
         this.recipe = this.recipe.bind(this);
     }
@@ -16,6 +17,8 @@ class TiredModal extends React.Component {
         this.setState({
             showMe:!this.state.showMe
         })
+        let buttonText = this.state.buttonText == "View Recipe" ? "Hide Recipe" : "View Recipe"
+        this.setState({ buttonText: buttonText })
     }
 
     close() {
@@ -39,7 +42,7 @@ class TiredModal extends React.Component {
                         <p className="text-vertical-center">
                             {(this.props.meal != null) ? this.props.meal.name : ""}
                             </p>
-                        <button className="recipe-btn" onClick={this.recipe}> View Recipe</button>
+                        <button className="recipe-btn" onClick={this.recipe}>{this.state.buttonText}</button>
                     </view>
                     <view className = "col-3">
                         <img src={(this.props.meal != null) ? this.props.meal.img : ""} className="w-100 image-border" alt="..." />
