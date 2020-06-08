@@ -50,7 +50,7 @@ class TiredModal extends React.Component {
                         this.state.showMe ?
                             <div className="row-md-3" style={{ position: "relative" }}>
                                 <h5>Recipe:</h5>
-                                <p className="recipe-text">
+                                <p className="recipe-text" style={{ paddingRight: "20px" }}>
                                     {(this.props.meal != null) ? this.props.meal.recipe.split("\n").map(function(item, key) {
                                         return (
                                             <span>
@@ -64,7 +64,7 @@ class TiredModal extends React.Component {
                             : null
                     }
                 </view>
-                <view style={{ paddingLeft: "15px" }}>
+                <view style={{ paddingLeft: "15px"; paddingRight: "20px" }}>
                         <h5>Ingredients:</h5>
                         <p>{ingredients}</p>
                         <h5>Nutrients:</h5>
