@@ -536,6 +536,7 @@ img {
     background-color: #f3f3f3;
     padding: 20px;
     padding-bottom: 0px;
+    margin-top: 25px;
 }
 
 .left-column h5 {
@@ -553,10 +554,9 @@ img {
     background-color: transparent;
 }
 
-/*.left-column button {
-    background-color: #f3f3f3;
-    padding: 0px;
-}*/
+.left-column button {
+    margin-top: 0;
+}
 
 .nutrient-intake {
     height: 50%;
