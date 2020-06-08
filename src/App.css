@@ -289,7 +289,7 @@ img {
 }
 
 .recipe-detailed {
-    max-width: 50%;
+    /*max-width: 50%;*/
     min-height: 800px;
 }
 
@@ -507,6 +507,10 @@ img {
     transition: width .6s ease;
 }
 
+.nutrients-info-box p{
+    font-size: 0.75rem;
+    padding-right: 10px;
+}
 
 .progress {
     background-color: white;
@@ -548,10 +552,10 @@ img {
     background-color: transparent;
 }
 
-.left-column button {
+/*.left-column button {
     background-color: #f3f3f3;
     padding: 0px;
-}
+}*/
 .nutrient-intake {
     height: 50%;
     position: relative;
