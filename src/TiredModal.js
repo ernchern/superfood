@@ -34,7 +34,7 @@ class TiredModal extends React.Component {
         var mealType = (this.props.modalType == "modalBreakfast") ? "breakfast" : (this.props.modalType == "modalLunch") ? "lunch" : "dinner";
         return (
             <Modal show={this.props.show}>
-                <view className="row" style={{ paddingLeft: "15px",paddingRight: "15px", paddingTop: "10px" } }>
+                <view className="row" style={{ paddingLeft: "15px", paddingRight: "15px", paddingTop: "10px" } }>
                     <view className = "col-9">
                         <p className="text-vertical-center">
                             {(this.props.meal != null) ? this.props.meal.name : ""}
@@ -64,7 +64,7 @@ class TiredModal extends React.Component {
                             : null
                     }
                 </view>
-                <view style={{ paddingLeft: "15px"; paddingRight: "20px" }}>
+                <view style={{ paddingLeft: "15px", paddingRight: "20px" }}>
                         <h5>Ingredients:</h5>
                         <p>{ingredients}</p>
                         <h5>Nutrients:</h5>
