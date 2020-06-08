@@ -58,7 +58,9 @@ class PersonalRegister extends React.Component {
                                     </Col>
                                     <Col lg="6">
                                         <label>Password<span style={{color:'red'}}>*</span></label>
-                                        <input type="password" name="password" autoComplete='off' id="password" onChange={(event) => this.props.setResponse("pw", event.target.value)}/>
+                                        <input
+                                        value={this.props.responseData.pw}
+                                        type="password" name="password" autoComplete='off' id="password" onChange={(event) => this.props.setResponse("pw", event.target.value)}/>
                                     </Col>
                                     <Col lg="12" className="country-col">
                                         <label>Country of Residence<span style={{color:'red'}}>*</span></label>
