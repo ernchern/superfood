@@ -12,7 +12,7 @@ class RecipeInfo extends React.Component {
         ingredients = ingredients.map(x => x.split(", "));
         console.log(this.props.meal);
         return (
-            <div className="recipe-margin recipe-pane">
+            <div className="recipe-margin recipe-detailed">
                 <div className="container">
                     <div className="row recipe-margin headerRecipe">
                         <div className="col-lg-9" style={{position: "relative"}}>
