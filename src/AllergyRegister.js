@@ -48,6 +48,7 @@ class AllergyRegister extends React.Component {
 			<section className="register-section container-box">
 				<Container>
 					<Row>
+						<Col lg="2"></Col>
 						<Col lg="8" align='center'>
 							<div className="register-text">
 								<div className="section-title">
@@ -67,8 +68,8 @@ class AllergyRegister extends React.Component {
 										<div>
 											<p className="question">Do you have any food allergy?</p>
 											<div>
-											  <label className="radio-inline"><input type="radio" name="allergy" onChange={this.showAllergy}/>Yes</label>
-											  <label className="radio-inline"><input type="radio" name="allergy" onChange={this.hideAllergy}/>No</label>
+											  <label className="radio-inline"><input type="radio" name="allergy" onChange={this.showAllergy}/><p class="radio-button">Yes</p></label>
+											  <label className="radio-inline"><input type="radio" name="allergy" onChange={this.hideAllergy}/><p class="radio-button">No</p></label>
 											</div>
 										</div>
 									</Col>
@@ -82,6 +83,7 @@ class AllergyRegister extends React.Component {
 								</form>
 							</div>
 						</Col>
+						<Col lg="2"></Col>
 					</Row>
 				</Container>
 			</section>

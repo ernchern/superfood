@@ -24,6 +24,7 @@ class PersonalRegister extends React.Component {
         <section className="register-section container-box">
             <Container>
                 <Row>
+                    <Col lg="2"></Col>
                     <Col lg="8">
                         <div className="register-text align-content-center">
                             <div className="section-title">
@@ -83,6 +84,7 @@ class PersonalRegister extends React.Component {
                             </form>
                         </div>
                     </Col>
+                    <Col lg="2"></Col>
                 </Row>
             </Container>
         </section>

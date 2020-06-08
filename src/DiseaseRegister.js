@@ -67,8 +67,8 @@ class DiseaseRegister extends React.Component {
 										<div>
 											<p className="question">Do you have any health restriction?</p>
 											<div>
-											  <label className="radio-inline"><input type="radio" name="disease" onChange={this.showOptions}/>Yes</label>
-											  <label className="radio-inline"><input type="radio" name="disease" onChange={this.hideOptions}/>No</label>
+											  <label className="radio-inline"><input type="radio" name="disease" onChange={this.showOptions}/><p class="radio-button">Yes</p></label>
+											  <label className="radio-inline"><input type="radio" name="disease" onChange={this.hideOptions}/><p class="radio-button">No</p></label>
 											</div>
 										</div>
 									</Col>

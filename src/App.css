@@ -556,6 +556,7 @@ img {
     background-color: #f3f3f3;
     padding: 0px;
 }*/
+
 .nutrient-intake {
     height: 50%;
     position: relative;
@@ -947,4 +948,12 @@ a {
 
 .country-col {
 	padding-bottom:20px;
+}
+
+.radio-button {
+    font-size: large;
+    text-align: center;
+    line-height: 46px;
+    padding-left: 10px;
+    vertical-align: middle;
 }
