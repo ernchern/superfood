@@ -14,8 +14,7 @@ class RecipeInfo extends React.Component {
         return (
             <div className="recipe-margin recipe-detailed">
                 <div className="container">
-                    <div className="row headerRecipe" style={{marginTop: 
-                        25px"}}>
+                    <div className="row headerRecipe" style={{marginTop: "25px"}}>
                         <div className="col-lg-9" style={{position: "relative"}}>
                             <p className="text-vertical-center">
                                 {this.props.meal.name}
