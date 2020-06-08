@@ -36,8 +36,8 @@ class AllergyRegister extends React.Component {
 			<div>
 				<p className="question">Choose type(s) of food allergy:</p>
 				<div>
-				  <label className="checkbox-inline"><input type="checkbox" onChange={(event) => this.props.setResponse("nopeanut",event.target.checked)}/>Peanuts</label>
-				  <label className="checkbox-inline"><input type="checkbox" onChange={(event) => this.props.setResponse("nomilk", event.target.checked)}/>Milk</label>
+				  <label className="checkbox-inline"><input type="checkbox" onChange={(event) => this.props.setResponse("nopeanut",event.target.checked)}/><p class="radio-button">Peanuts</p></label>
+				  <label className="checkbox-inline"><input type="checkbox" onChange={(event) => this.props.setResponse("nomilk", event.target.checked)}/><p class="radio-button">Milk</p></label>
 				</div>
 			</div>
 			</Fade>;

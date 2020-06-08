@@ -36,8 +36,8 @@ class DiseaseRegister extends React.Component {
 			<div>
 				<p className="question">Choose type(s) of health restriction:</p>
 				<div>
-				  <label className="checkbox-inline"><input type="checkbox" onChange={(event) => this.props.setResponse("diabetes",event.target.checked)}/>Diabetes</label>
-				  <label className="checkbox-inline"><input type="checkbox" onChange={(event) => this.props.setResponse("hypertension", event.target.checked)}/>Hypertension</label>
+				  <label className="checkbox-inline"><input type="checkbox" onChange={(event) => this.props.setResponse("diabetes",event.target.checked)}/><p class="radio-button">Diabetes</p></label>
+				  <label className="checkbox-inline"><input type="checkbox" onChange={(event) => this.props.setResponse("hypertension", event.target.checked)}/><p class="radio-button">Hypertension</p></label>
 				</div>
 			</div>
 			</Fade>;
@@ -49,7 +49,7 @@ class DiseaseRegister extends React.Component {
 				<Container>
 					<Row>
 					<Col lg="2"></Col>
-						<Col lg="8">
+						<Col align="center" lg="8">
 							<div className="register-text">
 								<div className="section-title">
 									<h2>Register Now</h2>
