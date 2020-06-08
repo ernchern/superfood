@@ -69,12 +69,12 @@ class PersonalRegister extends React.Component {
 										defaultValue={{ label:this.props.responseData.country, value:this.props.responseData.country}}/>
                                     </Col>
                                     <Col lg="6">
-                                        <label>Weight (m)</label>
+                                        <label>Weight (kg)</label>
                                         <input autoComplete='off' type="text" id="weight" onChange={(event) => this.props.setResponse("weight", event.target.value)}
 										value={this.props.responseData.weight}/>
                                     </Col>
                                     <Col lg="6">
-                                        <label>Height (kg)</label>
+                                        <label>Height (m)</label>
                                         <input autoComplete='off' type="text" id="height" onChange={(event) => this.props.setResponse("height", event.target.value)}
 										value={this.props.responseData.height}/>
                                     </Col>
