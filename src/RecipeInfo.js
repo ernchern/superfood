@@ -14,7 +14,7 @@ class RecipeInfo extends React.Component {
         return (
             <div className="recipe-margin recipe-detailed">
                 <div className="container">
-                    <div className="row">
+                    <div className="row" style={{marginTop: "25px"}}>
                             <div className="col" className="top-recipe-row">
                                 <button className="top-recipe-row"><p className="recipe-color-p" 
                                 onClick={(event) => this.props.toggleRecipeMode(event, null)}>Close</p></button>
