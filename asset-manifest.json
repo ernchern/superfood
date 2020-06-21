@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/superfood/static/css/main.d0e8f182.chunk.css",
-    "main.js": "/superfood/static/js/main.3b57fb10.chunk.js",
-    "main.js.map": "/superfood/static/js/main.3b57fb10.chunk.js.map",
+    "main.css": "/superfood/static/css/main.7bfb2170.chunk.css",
+    "main.js": "/superfood/static/js/main.c7eb1eba.chunk.js",
+    "main.js.map": "/superfood/static/js/main.c7eb1eba.chunk.js.map",
     "runtime-main.js": "/superfood/static/js/runtime-main.98c8c6bd.js",
     "runtime-main.js.map": "/superfood/static/js/runtime-main.98c8c6bd.js.map",
     "static/css/2.af3c1da9.chunk.css": "/superfood/static/css/2.af3c1da9.chunk.css",
     "static/js/2.2a138b5f.chunk.js": "/superfood/static/js/2.2a138b5f.chunk.js",
     "static/js/2.2a138b5f.chunk.js.map": "/superfood/static/js/2.2a138b5f.chunk.js.map",
     "index.html": "/superfood/index.html",
-    "precache-manifest.6fdc96625719eb80f66cca6cc108e440.js": "/superfood/precache-manifest.6fdc96625719eb80f66cca6cc108e440.js",
+    "precache-manifest.25d6db8efea67e6caa7ea6f870c9392a.js": "/superfood/precache-manifest.25d6db8efea67e6caa7ea6f870c9392a.js",
     "service-worker.js": "/superfood/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/superfood/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.d0e8f182.chunk.css.map": "/superfood/static/css/main.d0e8f182.chunk.css.map",
+    "static/css/main.7bfb2170.chunk.css.map": "/superfood/static/css/main.7bfb2170.chunk.css.map",
     "static/js/2.2a138b5f.chunk.js.LICENSE.txt": "/superfood/static/js/2.2a138b5f.chunk.js.LICENSE.txt",
     "static/media/App.css": "/superfood/static/media/bck.c35ba35d.jpg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.98c8c6bd.js",
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.2a138b5f.chunk.js",
-    "static/css/main.d0e8f182.chunk.css",
-    "static/js/main.3b57fb10.chunk.js"
+    "static/css/main.7bfb2170.chunk.css",
+    "static/js/main.c7eb1eba.chunk.js"
   ]
 }
