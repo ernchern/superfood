@@ -962,3 +962,7 @@ a {
 .container {
     max-width: 95%;
 }
+
+.meal-hover {
+    cursor: pointer;
+}

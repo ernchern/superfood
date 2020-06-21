@@ -18,10 +18,9 @@ class ProfileInfo extends React.Component{
                     <div className="contatiner row">
                         <div className="col-sm-6 left-column">
                         <button className="profile-button" onClick={() => this.props.setPage("register")}>Edit Profile</button>
-                        </div>
-                        <div className="col-sm-6 left-column logout-column">
                         <button className="logout-button" onClick={() => this.props.logout()}>Log out</button>
-                    </div>
+                        </div>
+                        
                     </div>
                 </div>
                 
