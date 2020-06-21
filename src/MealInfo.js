@@ -78,12 +78,12 @@ class MealInfo extends React.Component{
                     <div className="col-3 dateDiv align-content-center"></div></div>
                         <div className="row align-content-center">
                             <div className="col-4">
-                            <button className="primary-btn fillDiv " onClick={() => this.changeDate(-1)}>Previous day</button>
+                            <button className="primary-btn fillDiv " style={{width: "40%", float: right}} onClick={() => this.changeDate(-1)}>&lt&lt</button>
                             </div>
-                            <div className="col-4 dateDiv align-content-center"><button className="primary-btn fillDiv" onClick={() => this.setState({date: this.props.currentDate})}>Today</button></div>
+                            <div className="col-4 dateDiv align-content-center"><button className="primary-btn fillDiv"  onClick={() => this.setState({date: this.props.currentDate})}>Today</button></div>
 
                             <div className="col-4">
-                                <button className="primary-btn fillDiv" onClick={() => this.changeDate(1)}>Next day</button>
+                                <button className="primary-btn fillDiv" style={{width: "40%", float: left}}  onClick={() => this.changeDate(1)}>&gt&gt</button>
                             </div> 
                         </div>
                         
