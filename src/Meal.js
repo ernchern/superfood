@@ -12,7 +12,7 @@ class Meal extends React.Component{
         ingredients = ingredients.map(x => x.split(", ")[0]);
         ingredients = ingredients.join(", ");
         return(
-            <div className="row no-gutters bg-light position-relative meal">
+            <div className="row no-gutters bg-light position-relative meal meal-hover">
                 <div className="col-md-4 mb-md-0 p-md-4">
                     <img src={this.props.meal.img} className="w-100" alt="..."/>
                 </div>
