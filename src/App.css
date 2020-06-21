@@ -625,7 +625,7 @@ a {
 
 .headerRecipe {
     background-color: #b7caa2;
-    border-radius: 0px 0px 15px 15px ;
+    border-radius: 0px;
     border-bottom: 1px solid white;
 }
 
@@ -870,10 +870,6 @@ a {
     height: 65%;
 }
 
-
-.main-page-white {
-    border-radius: 5%;
-}
 
 .single-meal {
     padding: 0px!important;

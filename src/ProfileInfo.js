@@ -16,11 +16,14 @@ class ProfileInfo extends React.Component{
                     <p style={{display: (this.props.user.height == null)? "none" : "block"}}>Height: {this.props.user.height + "m"}</p>
                     <p style={{display: (this.props.user.weight == null)? "none" : "block"}}>Weight: {this.props.user.weight + "kg"}</p>
                     <div className="contatiner row">
-                        <div className="col-sm-6 left-column">
+                        <div className="col-sm-6 left-column" style={{marginTop: "0px"}}>
                         <button className="profile-button" onClick={() => this.props.setPage("register")}>Edit Profile</button>
+                        </div>
+                    </div>
+                    <div className="contatiner row">
+                        <div className="col-sm-6 left-column" style={{marginTop: "0px"}}>
                         <button className="logout-button" onClick={() => this.props.logout()}>Log out</button>
                         </div>
-                        
                     </div>
                 </div>
                 
