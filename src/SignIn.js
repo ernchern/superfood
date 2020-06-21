@@ -35,7 +35,7 @@ class SignIn extends React.Component {
                                 <Row>
                                     <Col lg="12">
                                         <label>Email</label>
-                                        <input autoComplete='off' name="email" type="email" onChange={(event) => this.props.setResponse("email", event.target.value)}/>
+                                        <input autoComplete='on' name="email" type="email" onChange={(event) => this.props.setResponse("email", event.target.value)}/>
                                     </Col>
                                     <Col lg="12">
                                         <label>Password</label>
