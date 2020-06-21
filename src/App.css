@@ -231,7 +231,7 @@ img {
 }
 
 .register-text {
-    padding: 50px 70px 60px 70px;
+    padding: 20px 30px 20px 30px;
     background: #ffffff;
     margin-right: -15px;
 }
@@ -957,4 +957,8 @@ a {
     line-height: 46px;
     padding-left: 10px;
     vertical-align: middle;
+}
+
+.container {
+    max-width: 95%;
 }
