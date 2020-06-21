@@ -14,7 +14,14 @@ class RecipeInfo extends React.Component {
         return (
             <div className="recipe-margin recipe-detailed">
                 <div className="container">
-                    <div className="row headerRecipe" style={{marginTop: "25px"}}>
+                    <div className="row">
+                            <div className="col" className="top-recipe-row">
+                                <button className="top-recipe-row"><p className="recipe-color-p" 
+                                onClick={(event) => this.props.toggleRecipeMode(event, null)}>Close</p></button>
+                            </div>
+
+                        </div>
+                    <div className="row headerRecipe">
                         <div className="col-lg-9" style={{position: "relative"}}>
                             <p className="text-vertical-center">
                                 {this.props.meal.name}
@@ -87,13 +94,7 @@ class RecipeInfo extends React.Component {
                             </p>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col" className="bottom-recipe-row">
-                            <button className="bottom-recipe-row"><p className="recipe-color-p" 
-                            onClick={(event) => this.props.toggleRecipeMode(event, null)}>Close</p></button>
-                        </div>
-
-                    </div>
+                    
 
                 </div>
                 
