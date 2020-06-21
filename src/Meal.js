@@ -13,10 +13,10 @@ class Meal extends React.Component{
         ingredients = ingredients.join(", ");
         return(
             <div className="row no-gutters bg-light position-relative meal">
-                <div className="col-md-6 mb-md-0 p-md-4">
+                <div className="col-md-4 mb-md-0 p-md-4">
                     <img src={this.props.meal.img} className="w-100" alt="..."/>
                 </div>
-                <div className="col-md-6 position-static p-4 pl-md-0 ">
+                <div className="col-md-8 position-static p-4 pl-md-0 ">
                     <h5 className="mt-0">{this.props.type}</h5>
                     <h6 className="mt-0">{this.props.meal.name}</h6>
                     <p>Ingredients: {ingredients}. <br/> 
