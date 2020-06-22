@@ -43,8 +43,8 @@ class Register extends React.Component {
                 //console.log(responses);
                 if (this.props.loggedUser == null) {
                     firebase.database().ref("/users/").push(responses).catch(error => console.log(error)).then(() => 
-                this.props.setPage('login'));
-				alert("You are registered. Welcome to SUPERFOOD, "+responses.name+"!");
+                alert("You are registered. Welcome to SUPERFOOD, "+responses.name+"!");
+				this.props.setPage('login'));
                 } else {
                     firebase.database().ref("/users/").push(responses).catch(error => console.log(error)).then(() => 
                 this.props.setPage('main'));
