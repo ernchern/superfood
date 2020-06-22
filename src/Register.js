@@ -42,9 +42,10 @@ class Register extends React.Component {
             if ("hypertension" in responses && "diabetes" in responses) {
                 //console.log(responses);
                 if (this.props.loggedUser == null) {
+					alert("You are registered. Welcome to SUPERFOOD, "+responses.name+"!");
                     firebase.database().ref("/users/").push(responses).catch(error => console.log(error)).then(() => 
-                alert("You are registered. Welcome to SUPERFOOD, "+responses.name+"!");
-				this.props.setPage('login'));
+						this.props.setPage('login')
+					);
                 } else {
                     firebase.database().ref("/users/").push(responses).catch(error => console.log(error)).then(() => 
                 this.props.setPage('main'));
