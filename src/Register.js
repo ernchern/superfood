@@ -47,6 +47,8 @@ class Register extends React.Component {
 						this.props.setPage('login')
 					);
                 } else {
+					console.log(this.props.loggedKey);
+					firebase.database().ref("/users/"+this.props.loggedKey).remove();
                     firebase.database().ref("/users/").push(responses).catch(error => console.log(error)).then(() => 
                 this.props.setPage('main'));
                 }

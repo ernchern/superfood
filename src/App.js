@@ -42,7 +42,8 @@ class App extends React.Component {
     for (key in this.state.users) {
       user = this.state.users[key];
       if (user.pw === this.state.signInPw && user.email === this.state.signInEmail) {
-        this.setState({loggedUser: user});
+		var loggedUser = user;
+		var loggedKey = key;
         logged = true;
         var filteredRecipes = this.state.recipes.filter(
           meal => !(user.nomilk && !meal.milkFree) &&
@@ -53,7 +54,7 @@ class App extends React.Component {
         )
         console.log(user.country);
         console.log(filteredRecipes);
-        this.setState({recipes: filteredRecipes})
+        this.setState({recipes: filteredRecipes, loggedUser: loggedUser, loggedKey: loggedKey});
         this.setPage("main");
       }
     }
@@ -83,7 +84,7 @@ class App extends React.Component {
         content = <Login setPage={this.setPage}/>;
         break;
       case "register":
-        content = <Register loggedUser={this.state.loggedUser} setPage={this.setPage} logged/>;
+        content = <Register loggedUser={this.state.loggedUser} loggedKey={this.state.loggedKey} setPage={this.setPage} logged/>;
         break;
       case "signIn":
         content = <ReactEncrypt
